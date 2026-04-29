@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_ulhil"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_kcv8n"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_7ippo"]
+
+[sub_resource type="Resource" id="Resource_sdlli"]
+script = ExtResource("1_ulhil")
+role = "skirmisher"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 72.0
+base_shield = 18.0
+base_speed = 166.0
+base_damage = 14.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("thermal_skirmisher_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_skirmisher"
+display_name = "Thermal Skirmisher"
+summary = "Thermal family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_bep3x"]
+script = ExtResource("2_kcv8n")
+prefix = "Neon"
+suffix = "Ghost"
+bonus_health = 0.96
+bonus_damage = 1.1
+bonus_speed = 1.1
+aggression_bonus = 1.14
+habitat_tags = PackedStringArray("megacity_ruins")
+palette_shift = Color(1, 0.84705883, 0.43529412, 1)
+id = "neon_ghost"
+display_name = "Neon Ghost"
+summary = "Neon Ghost modifier package."
+
+[resource]
+script = ExtResource("3_7ippo")
+family = SubResource("Resource_sdlli")
+mutation = SubResource("Resource_bep3x")
+role = "skirmisher"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 67.0464
+base_shield = 17.316
+base_speed = 182.60000000000002
+base_damage = 14.938000000000002
+aggression = 1.3907999999999998
+attack_ids = PackedStringArray("thermal_skirmisher_attack")
+habitat_tags = PackedStringArray("megacity_ruins")
+palette_primary = Color(1, 0.6421177, 0.40376472, 1)
+palette_secondary = Color(1, 0.8837647, 0.57082355, 1)
+loot_ids = PackedStringArray("scrap_bundle", "thermal_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "thermal_skirmisher__neon_ghost"
+display_name = "Neon Thermal Skirmisher Ghost"
+summary = "Thermal Skirmisher adapted for Neon Ghost conditions."

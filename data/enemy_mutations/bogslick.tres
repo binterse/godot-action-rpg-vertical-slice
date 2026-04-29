@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EnemyMutationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="1_iumgw"]
+
+[resource]
+script = ExtResource("1_iumgw")
+prefix = "Bogslick"
+bonus_health = 1.08
+bonus_speed = 0.98
+aggression_bonus = 0.98
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("toxic_marsh")
+palette_shift = Color(0.6117647, 0.93333334, 0.38431373, 1)
+id = "bogslick"
+display_name = "Bogslick"
+summary = "Bogslick modifier package."

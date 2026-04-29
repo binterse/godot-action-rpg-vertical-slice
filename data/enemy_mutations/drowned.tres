@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyMutationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="1_lugc5"]
+
+[resource]
+script = ExtResource("1_lugc5")
+prefix = "Drowned"
+bonus_health = 1.04
+bonus_speed = 0.96
+ailment_bonus = 1.1
+habitat_tags = PackedStringArray("flooded_dome")
+palette_shift = Color(0.38039216, 0.7764706, 1, 1)
+id = "drowned"
+display_name = "Drowned"
+summary = "Drowned modifier package."

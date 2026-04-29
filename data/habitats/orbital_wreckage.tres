@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HabitatResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="1_qad0p"]
+
+[resource]
+script = ExtResource("1_qad0p")
+palette_primary = Color(0.14509805, 0.2509804, 0.36862746, 1)
+palette_secondary = Color(0.42745098, 0.8862745, 1, 1)
+ambient_color = Color(0.03137255, 0.0627451, 0.105882354, 1)
+hazard_element_id = "void"
+hazard_ailment_id = "shock"
+hazard_damage = 7.0
+hazard_interval = 3.8
+spawn_bias_role = "ranged"
+enemy_weight_bias = {
+"ranged": 1.0,
+"void": 0.9
+}
+id = "orbital_wreckage"
+display_name = "Orbital Wreckage"
+summary = "Debris-ringed hull plates and intermittent vacuum surges."

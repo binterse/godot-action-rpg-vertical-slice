@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_vb5gg"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_w22hi"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_5qq82"]
+
+[sub_resource type="Resource" id="Resource_fbq4n"]
+script = ExtResource("1_vb5gg")
+role = "skirmisher"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 72.0
+base_shield = 18.0
+base_speed = 184.0
+base_damage = 12.0
+aggression = 1.3
+default_attack_ids = PackedStringArray("volt_skirmisher_attack")
+palette_color = Color(1, 0.90588236, 0.45490196, 1)
+id = "volt_skirmisher"
+display_name = "Volt Skirmisher"
+summary = "Volt family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_t2p5m"]
+script = ExtResource("2_w22hi")
+prefix = "Mycoclad"
+bonus_health = 1.02
+bonus_damage = 1.04
+bonus_speed = 1.02
+aggression_bonus = 1.06
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("fungal_jungle")
+palette_shift = Color(0.4745098, 0.9647059, 0.65882355, 1)
+id = "mycoclad"
+display_name = "Mycoclad"
+summary = "Mycoclad modifier package."
+
+[resource]
+script = ExtResource("3_5qq82")
+family = SubResource("Resource_fbq4n")
+mutation = SubResource("Resource_t2p5m")
+role = "skirmisher"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 76.3776
+base_shield = 17.532
+base_speed = 187.68
+base_damage = 12.9792
+aggression = 1.3780000000000001
+attack_ids = PackedStringArray("volt_skirmisher_attack")
+habitat_tags = PackedStringArray("fungal_jungle")
+palette_primary = Color(0.8265883, 0.9252941, 0.5221961, 1)
+palette_secondary = Color(0.6006274, 0.9731765, 0.7407059, 1)
+loot_ids = PackedStringArray("scrap_bundle", "volt_cell")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "volt_skirmisher__mycoclad"
+display_name = "Mycoclad Volt Skirmisher"
+summary = "Volt Skirmisher adapted for Mycoclad conditions."

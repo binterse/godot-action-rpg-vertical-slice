@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_o8cbq"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_jikyp"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_p0l73"]
+
+[sub_resource type="Resource" id="Resource_k4pp4"]
+script = ExtResource("1_o8cbq")
+role = "skirmisher"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 80.0
+base_shield = 18.0
+base_speed = 166.0
+base_damage = 12.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("corrosive_skirmisher_attack")
+palette_color = Color(0.5568628, 0.9607843, 0.54509807, 1)
+id = "corrosive_skirmisher"
+display_name = "Corrosive Skirmisher"
+summary = "Corrosive family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_lp4tc"]
+script = ExtResource("2_jikyp")
+prefix = "Relicbound"
+bonus_health = 1.08
+bonus_damage = 1.08
+bonus_speed = 0.98
+aggression_bonus = 1.08
+ailment_bonus = 1.14
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_shift = Color(0.7019608, 0.5529412, 1, 1)
+id = "relicbound"
+display_name = "Relicbound"
+summary = "Relicbound modifier package."
+
+[resource]
+script = ExtResource("3_p0l73")
+family = SubResource("Resource_k4pp4")
+mutation = SubResource("Resource_lp4tc")
+role = "skirmisher"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 85.536
+base_shield = 17.748
+base_speed = 162.68
+base_damage = 12.830400000000001
+aggression = 1.3176
+attack_ids = PackedStringArray("corrosive_skirmisher_attack")
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_primary = Color(0.60474515, 0.8261961, 0.6952157, 1)
+palette_secondary = Color(0.7734902, 0.6602353, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "corrosive_resin")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "corrosive_skirmisher__relicbound"
+display_name = "Relicbound Corrosive Skirmisher"
+summary = "Corrosive Skirmisher adapted for Relicbound conditions."

@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_t41xc"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_uybhv"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_kbahy"]
+
+[sub_resource type="Resource" id="Resource_0mkmg"]
+script = ExtResource("1_t41xc")
+role = "skirmisher"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 72.0
+base_shield = 24.0
+base_speed = 166.0
+base_damage = 12.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("cryo_skirmisher_attack")
+palette_color = Color(0.53333336, 0.88235295, 1, 1)
+id = "cryo_skirmisher"
+display_name = "Cryo Skirmisher"
+summary = "Cryo family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_reyig"]
+script = ExtResource("2_uybhv")
+prefix = "Drowned"
+bonus_health = 1.04
+bonus_speed = 0.96
+ailment_bonus = 1.1
+habitat_tags = PackedStringArray("flooded_dome")
+palette_shift = Color(0.38039216, 0.7764706, 1, 1)
+id = "drowned"
+display_name = "Drowned"
+summary = "Drowned modifier package."
+
+[resource]
+script = ExtResource("3_kbahy")
+family = SubResource("Resource_0mkmg")
+mutation = SubResource("Resource_reyig")
+role = "skirmisher"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 76.3776
+base_shield = 23.472
+base_speed = 159.35999999999999
+base_damage = 12.24
+aggression = 1.22
+attack_ids = PackedStringArray("cryo_skirmisher_attack")
+habitat_tags = PackedStringArray("flooded_dome")
+palette_primary = Color(0.48286277, 0.84741175, 1, 1)
+palette_secondary = Color(0.52909803, 0.83011764, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "cryo_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "cryo_skirmisher__drowned"
+display_name = "Drowned Cryo Skirmisher"
+summary = "Cryo Skirmisher adapted for Drowned conditions."

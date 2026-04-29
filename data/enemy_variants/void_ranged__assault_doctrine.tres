@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_dusgq"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_etmvk"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_ky7t4"]
+
+[sub_resource type="Resource" id="Resource_lfvxk"]
+script = ExtResource("1_dusgq")
+role = "ranged"
+element_id = "void"
+ailment_id = "shock"
+base_health = 64.0
+base_shield = 38.0
+base_speed = 132.0
+base_damage = 14.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("void_ranged_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_ranged"
+display_name = "Void Ranged"
+summary = "Void family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_hnmv5"]
+script = ExtResource("2_etmvk")
+category = "advanced"
+prefix = "Assault"
+bonus_health = 1.08
+bonus_damage = 1.12
+bonus_speed = 1.08
+aggression_bonus = 1.16
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_shift = Color(1, 0.73333335, 0.4862745, 1)
+id = "assault_doctrine"
+display_name = "Assault Doctrine"
+summary = "Assault Doctrine modifier package."
+
+[resource]
+script = ExtResource("3_ky7t4")
+family = SubResource("Resource_lfvxk")
+mutation = SubResource("Resource_hnmv5")
+role = "ranged"
+element_id = "void"
+ailment_id = "shock"
+base_health = 69.12
+base_shield = 37.467999999999996
+base_speed = 142.56
+base_damage = 15.680000000000001
+aggression = 1.2528
+attack_ids = PackedStringArray("void_ranged_attack")
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_primary = Color(0.8003137, 0.6124706, 0.83047056, 1)
+palette_secondary = Color(1, 0.79733336, 0.60956866, 1)
+loot_ids = PackedStringArray("scrap_bundle", "void_shard")
+difficulty_bias = {
+"cataclysm": 1.12,
+"mythic": 1.06
+}
+id = "void_ranged__assault_doctrine"
+display_name = "Assault Void Ranged"
+summary = "Void Ranged adapted for Assault Doctrine conditions."

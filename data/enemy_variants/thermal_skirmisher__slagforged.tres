@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_6mie2"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_twdai"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_kh8bb"]
+
+[sub_resource type="Resource" id="Resource_sdlli"]
+script = ExtResource("1_6mie2")
+role = "skirmisher"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 72.0
+base_shield = 18.0
+base_speed = 166.0
+base_damage = 14.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("thermal_skirmisher_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_skirmisher"
+display_name = "Thermal Skirmisher"
+summary = "Thermal family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_1iuto"]
+script = ExtResource("2_twdai")
+prefix = "Slagforged"
+bonus_health = 1.1
+bonus_damage = 1.08
+bonus_speed = 0.94
+aggression_bonus = 1.02
+ailment_bonus = 1.06
+habitat_tags = PackedStringArray("magma_foundry")
+palette_shift = Color(1, 0.5411765, 0.3882353, 1)
+id = "slagforged"
+display_name = "Slagforged"
+summary = "Slagforged modifier package."
+
+[resource]
+script = ExtResource("3_kh8bb")
+family = SubResource("Resource_sdlli")
+mutation = SubResource("Resource_1iuto")
+role = "skirmisher"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 77.616
+base_shield = 17.82
+base_speed = 156.04
+base_damage = 14.8176
+aggression = 1.2444
+attack_ids = PackedStringArray("thermal_skirmisher_attack")
+habitat_tags = PackedStringArray("magma_foundry")
+palette_primary = Color(1, 0.5411765, 0.3882353, 1)
+palette_secondary = Color(1, 0.6512941, 0.5350588, 1)
+loot_ids = PackedStringArray("scrap_bundle", "thermal_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "thermal_skirmisher__slagforged"
+display_name = "Slagforged Thermal Skirmisher"
+summary = "Thermal Skirmisher adapted for Slagforged conditions."

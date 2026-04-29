@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyMutationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="1_q4hrk"]
+
+[resource]
+script = ExtResource("1_q4hrk")
+prefix = "Slagforged"
+bonus_health = 1.1
+bonus_damage = 1.08
+bonus_speed = 0.94
+aggression_bonus = 1.02
+ailment_bonus = 1.06
+habitat_tags = PackedStringArray("magma_foundry")
+palette_shift = Color(1, 0.5411765, 0.3882353, 1)
+id = "slagforged"
+display_name = "Slagforged"
+summary = "Slagforged modifier package."

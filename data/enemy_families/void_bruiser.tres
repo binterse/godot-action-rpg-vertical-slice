@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyFamilyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_e686s"]
+
+[resource]
+script = ExtResource("1_e686s")
+role = "bruiser"
+element_id = "void"
+ailment_id = "shock"
+base_health = 128.0
+base_shield = 46.0
+base_speed = 102.0
+base_damage = 18.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("void_bruiser_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_bruiser"
+display_name = "Void Bruiser"
+summary = "Void family tuned for bruiser behavior."

@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_k46qf"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_pnny1"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_dnn2e"]
+
+[sub_resource type="Resource" id="Resource_6ulnp"]
+script = ExtResource("1_k46qf")
+role = "bruiser"
+element_id = "void"
+ailment_id = "shock"
+base_health = 128.0
+base_shield = 46.0
+base_speed = 102.0
+base_damage = 18.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("void_bruiser_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_bruiser"
+display_name = "Void Bruiser"
+summary = "Void family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_667l0"]
+script = ExtResource("2_pnny1")
+prefix = "Sandscoured"
+bonus_health = 0.98
+bonus_damage = 1.06
+bonus_speed = 1.08
+aggression_bonus = 1.08
+habitat_tags = PackedStringArray("dune_sea")
+palette_shift = Color(0.9647059, 0.7058824, 0.37254903, 1)
+id = "sandscoured"
+display_name = "Sandscoured"
+summary = "Sandscoured modifier package."
+
+[resource]
+script = ExtResource("3_dnn2e")
+family = SubResource("Resource_6ulnp")
+mutation = SubResource("Resource_667l0")
+role = "bruiser"
+element_id = "void"
+ailment_id = "shock"
+base_health = 122.93119999999999
+base_shield = 44.436
+base_speed = 110.16000000000001
+base_damage = 18.698400000000003
+aggression = 1.0368
+attack_ids = PackedStringArray("void_bruiser_attack")
+habitat_tags = PackedStringArray("dune_sea")
+palette_primary = Color(0.78866667, 0.6034118, 0.7929412, 1)
+palette_secondary = Color(0.9731765, 0.7764706, 0.5231373, 1)
+loot_ids = PackedStringArray("scrap_bundle", "void_shard")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "void_bruiser__sandscoured"
+display_name = "Sandscoured Void Bruiser"
+summary = "Void Bruiser adapted for Sandscoured conditions."

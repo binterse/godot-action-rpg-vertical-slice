@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HabitatResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="1_35g4x"]
+
+[resource]
+script = ExtResource("1_35g4x")
+palette_primary = Color(0.078431375, 0.19215687, 0.18431373, 1)
+palette_secondary = Color(0.4862745, 0.9411765, 0.8156863, 1)
+ambient_color = Color(0.02745098, 0.0627451, 0.05882353, 1)
+hazard_element_id = "corrosive"
+hazard_ailment_id = "rupture"
+hazard_damage = 7.6
+hazard_interval = 3.2
+spawn_bias_role = "skirmisher"
+enemy_weight_bias = {
+"corrosive": 1.0,
+"skirmisher": 0.7
+}
+id = "biotech_lab"
+display_name = "Biotech Lab"
+summary = "Sterile chambers bloom into weaponized growth at a moment's notice."

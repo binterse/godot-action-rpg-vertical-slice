@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ElementResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/element_resource.gd" id="1_xdl5h"]
+
+[resource]
+script = ExtResource("1_xdl5h")
+color = Color(0.5568628, 0.9607843, 0.54509807, 1)
+status_id = "rupture"
+strong_against_id = "volt"
+weak_against_id = "cryo"
+id = "corrosive"
+display_name = "Corrosive"
+summary = "Attrition damage that strips defenses over time."

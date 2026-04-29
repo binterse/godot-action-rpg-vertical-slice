@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EncounterTemplateResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/difficulty_resource.gd" id="1_d278p"]
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="2_w2i4x"]
+[ext_resource type="Script" path="res://scripts/resources/encounter_template_resource.gd" id="3_ogxwj"]
+
+[sub_resource type="Resource" id="Resource_ft3pr"]
+script = ExtResource("1_d278p")
+enemy_health_mult = 0.78
+enemy_damage_mult = 0.75
+enemy_speed_mult = 0.9
+aggression_mult = 0.85
+spawn_pressure_mult = 0.9
+ailment_potency_mult = 0.8
+player_recovery_mult = 1.3
+id = "story"
+display_name = "Story"
+summary = "Story tuning for enemy pressure, aggression, and ailment strength."
+
+[sub_resource type="Resource" id="Resource_ghn2c"]
+script = ExtResource("2_w2i4x")
+palette_primary = Color(0.30980393, 0.11372549, 0.078431375, 1)
+palette_secondary = Color(1, 0.5411765, 0.3882353, 1)
+ambient_color = Color(0.08235294, 0.03137255, 0.023529412, 1)
+hazard_element_id = "thermal"
+hazard_ailment_id = "burn"
+hazard_damage = 9.0
+hazard_interval = 2.9
+spawn_bias_role = "bruiser"
+enemy_weight_bias = {
+"bruiser": 1.1,
+"thermal": 1.0
+}
+id = "magma_foundry"
+display_name = "Magma Foundry"
+summary = "Molten channels and ruptured industrial vents flood the arena with heat."
+
+[resource]
+script = ExtResource("3_ogxwj")
+habitat = SubResource("Resource_ghn2c")
+difficulty = SubResource("Resource_ft3pr")
+allowed_enemy_ids = PackedStringArray("corrosive_bruiser__assault_doctrine", "corrosive_bruiser__phase_tuned", "corrosive_bruiser__regen_lattice", "corrosive_bruiser__siege_frame", "corrosive_bruiser__slagforged", "corrosive_bruiser__umbra_shroud", "corrosive_ranged__assault_doctrine", "corrosive_ranged__phase_tuned", "corrosive_ranged__regen_lattice", "corrosive_ranged__siege_frame", "corrosive_ranged__slagforged", "corrosive_ranged__umbra_shroud", "corrosive_skirmisher__assault_doctrine", "corrosive_skirmisher__phase_tuned", "corrosive_skirmisher__regen_lattice", "corrosive_skirmisher__siege_frame", "corrosive_skirmisher__slagforged", "corrosive_skirmisher__umbra_shroud", "cryo_bruiser__assault_doctrine", "cryo_bruiser__phase_tuned", "cryo_bruiser__regen_lattice", "cryo_bruiser__siege_frame", "cryo_bruiser__slagforged", "cryo_bruiser__umbra_shroud", "cryo_ranged__assault_doctrine", "cryo_ranged__phase_tuned", "cryo_ranged__regen_lattice", "cryo_ranged__siege_frame", "cryo_ranged__slagforged", "cryo_ranged__umbra_shroud", "cryo_skirmisher__assault_doctrine", "cryo_skirmisher__phase_tuned", "cryo_skirmisher__regen_lattice", "cryo_skirmisher__siege_frame", "cryo_skirmisher__slagforged", "cryo_skirmisher__umbra_shroud", "thermal_bruiser__assault_doctrine", "thermal_bruiser__phase_tuned", "thermal_bruiser__regen_lattice", "thermal_bruiser__siege_frame", "thermal_bruiser__slagforged", "thermal_bruiser__umbra_shroud", "thermal_ranged__assault_doctrine", "thermal_ranged__phase_tuned", "thermal_ranged__regen_lattice", "thermal_ranged__siege_frame", "thermal_ranged__slagforged", "thermal_ranged__umbra_shroud", "thermal_skirmisher__assault_doctrine", "thermal_skirmisher__phase_tuned", "thermal_skirmisher__regen_lattice", "thermal_skirmisher__siege_frame", "thermal_skirmisher__slagforged", "thermal_skirmisher__umbra_shroud", "void_bruiser__assault_doctrine", "void_bruiser__phase_tuned", "void_bruiser__regen_lattice", "void_bruiser__siege_frame", "void_bruiser__slagforged", "void_bruiser__umbra_shroud", "void_ranged__assault_doctrine", "void_ranged__phase_tuned", "void_ranged__regen_lattice", "void_ranged__siege_frame", "void_ranged__slagforged", "void_ranged__umbra_shroud", "void_skirmisher__assault_doctrine", "void_skirmisher__phase_tuned", "void_skirmisher__regen_lattice", "void_skirmisher__siege_frame", "void_skirmisher__slagforged", "void_skirmisher__umbra_shroud", "volt_bruiser__assault_doctrine", "volt_bruiser__phase_tuned", "volt_bruiser__regen_lattice", "volt_bruiser__siege_frame", "volt_bruiser__slagforged", "volt_bruiser__umbra_shroud", "volt_ranged__assault_doctrine", "volt_ranged__phase_tuned", "volt_ranged__regen_lattice", "volt_ranged__siege_frame", "volt_ranged__slagforged", "volt_ranged__umbra_shroud", "volt_skirmisher__assault_doctrine", "volt_skirmisher__phase_tuned", "volt_skirmisher__regen_lattice", "volt_skirmisher__siege_frame", "volt_skirmisher__slagforged", "volt_skirmisher__umbra_shroud")
+base_wave_size = 2
+reward_credits = 180
+champion_chance = 0.05
+boss_enemy_id = "thermal_bruiser__assault_doctrine"
+id = "magma_foundry__story"
+display_name = "Magma Foundry Story Sweep"
+summary = "Wave encounter for Magma Foundry on Story."

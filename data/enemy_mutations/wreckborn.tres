@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EnemyMutationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="1_8p8mw"]
+
+[resource]
+script = ExtResource("1_8p8mw")
+prefix = "Wreckborn"
+bonus_damage = 1.02
+bonus_speed = 0.98
+aggression_bonus = 1.04
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("orbital_wreckage")
+palette_shift = Color(0.54509807, 0.827451, 1, 1)
+id = "wreckborn"
+display_name = "Wreckborn"
+summary = "Wreckborn modifier package."

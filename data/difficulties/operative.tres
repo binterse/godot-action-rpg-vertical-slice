@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DifficultyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/difficulty_resource.gd" id="1_2j7mk"]
+
+[resource]
+script = ExtResource("1_2j7mk")
+enemy_health_mult = 1.18
+enemy_damage_mult = 1.12
+enemy_speed_mult = 1.05
+aggression_mult = 1.08
+spawn_pressure_mult = 1.15
+ailment_potency_mult = 1.08
+player_recovery_mult = 0.94
+id = "operative"
+display_name = "Operative"
+summary = "Operative tuning for enemy pressure, aggression, and ailment strength."

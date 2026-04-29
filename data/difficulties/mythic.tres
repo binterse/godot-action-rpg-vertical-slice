@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DifficultyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/difficulty_resource.gd" id="1_xuvgq"]
+
+[resource]
+script = ExtResource("1_xuvgq")
+enemy_health_mult = 1.54
+enemy_damage_mult = 1.38
+enemy_speed_mult = 1.16
+aggression_mult = 1.26
+spawn_pressure_mult = 1.42
+ailment_potency_mult = 1.28
+player_recovery_mult = 0.82
+id = "mythic"
+display_name = "Mythic"
+summary = "Mythic tuning for enemy pressure, aggression, and ailment strength."

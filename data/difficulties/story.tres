@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DifficultyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/difficulty_resource.gd" id="1_iwsqi"]
+
+[resource]
+script = ExtResource("1_iwsqi")
+enemy_health_mult = 0.78
+enemy_damage_mult = 0.75
+enemy_speed_mult = 0.9
+aggression_mult = 0.85
+spawn_pressure_mult = 0.9
+ailment_potency_mult = 0.8
+player_recovery_mult = 1.3
+id = "story"
+display_name = "Story"
+summary = "Story tuning for enemy pressure, aggression, and ailment strength."

@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_8bu47"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_hvib3"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_cdvtw"]
+
+[sub_resource type="Resource" id="Resource_k4pp4"]
+script = ExtResource("1_8bu47")
+role = "skirmisher"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 80.0
+base_shield = 18.0
+base_speed = 166.0
+base_damage = 12.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("corrosive_skirmisher_attack")
+palette_color = Color(0.5568628, 0.9607843, 0.54509807, 1)
+id = "corrosive_skirmisher"
+display_name = "Corrosive Skirmisher"
+summary = "Corrosive family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_uxq8l"]
+script = ExtResource("2_hvib3")
+category = "advanced"
+prefix = "Siege"
+bonus_health = 1.18
+bonus_damage = 1.16
+bonus_speed = 0.9
+aggression_bonus = 1.02
+ailment_bonus = 1.06
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_shift = Color(1, 0.5882353, 0.40784314, 1)
+id = "siege_frame"
+display_name = "Siege Frame"
+summary = "Siege Frame modifier package."
+
+[resource]
+script = ExtResource("3_cdvtw")
+family = SubResource("Resource_k4pp4")
+mutation = SubResource("Resource_uxq8l")
+role = "skirmisher"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 91.56799999999998
+base_shield = 18.108
+base_speed = 149.4
+base_damage = 13.502399999999998
+aggression = 1.2444
+attack_ids = PackedStringArray("corrosive_skirmisher_attack")
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_primary = Color(0.70309806, 0.8378431, 0.49980393, 1)
+palette_secondary = Color(1, 0.68705887, 0.5499608, 1)
+loot_ids = PackedStringArray("scrap_bundle", "corrosive_resin")
+difficulty_bias = {
+"cataclysm": 1.12,
+"mythic": 1.06
+}
+id = "corrosive_skirmisher__siege_frame"
+display_name = "Siege Corrosive Skirmisher"
+summary = "Corrosive Skirmisher adapted for Siege Frame conditions."

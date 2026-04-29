@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyFamilyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_weso6"]
+
+[resource]
+script = ExtResource("1_weso6")
+role = "ranged"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 64.0
+base_shield = 28.0
+base_speed = 150.0
+base_damage = 14.0
+aggression = 1.1600000000000001
+default_attack_ids = PackedStringArray("volt_ranged_attack")
+palette_color = Color(1, 0.90588236, 0.45490196, 1)
+id = "volt_ranged"
+display_name = "Volt Ranged"
+summary = "Volt family tuned for ranged behavior."

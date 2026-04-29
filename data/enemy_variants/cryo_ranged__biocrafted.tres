@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_5cefs"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_gt65h"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_d64ev"]
+
+[sub_resource type="Resource" id="Resource_u0bnm"]
+script = ExtResource("1_5cefs")
+role = "ranged"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 64.0
+base_shield = 34.0
+base_speed = 132.0
+base_damage = 14.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("cryo_ranged_attack")
+palette_color = Color(0.53333336, 0.88235295, 1, 1)
+id = "cryo_ranged"
+display_name = "Cryo Ranged"
+summary = "Cryo family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_4w7i7"]
+script = ExtResource("2_gt65h")
+prefix = "Biocrafted"
+bonus_health = 1.04
+bonus_damage = 1.02
+aggression_bonus = 1.06
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("biotech_lab")
+palette_shift = Color(0.4862745, 0.9411765, 0.8156863, 1)
+id = "biocrafted"
+display_name = "Biocrafted"
+summary = "Biocrafted modifier package."
+
+[resource]
+script = ExtResource("3_d64ev")
+family = SubResource("Resource_u0bnm")
+mutation = SubResource("Resource_4w7i7")
+role = "ranged"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 69.888
+base_shield = 33.252
+base_speed = 132.0
+base_damage = 14.994000000000002
+aggression = 1.1448
+attack_ids = PackedStringArray("cryo_ranged_attack")
+habitat_tags = PackedStringArray("biotech_lab")
+palette_primary = Color(0.51780397, 0.9017647, 0.93917644, 1)
+palette_secondary = Color(0.60956866, 0.95529413, 0.8599216, 1)
+loot_ids = PackedStringArray("scrap_bundle", "cryo_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "cryo_ranged__biocrafted"
+display_name = "Biocrafted Cryo Ranged"
+summary = "Cryo Ranged adapted for Biocrafted conditions."

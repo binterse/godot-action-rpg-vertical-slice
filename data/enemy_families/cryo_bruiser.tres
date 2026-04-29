@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyFamilyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_l4e5l"]
+
+[resource]
+script = ExtResource("1_l4e5l")
+role = "bruiser"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 118.0
+base_shield = 42.0
+base_speed = 94.0
+base_damage = 18.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("cryo_bruiser_attack")
+palette_color = Color(0.53333336, 0.88235295, 1, 1)
+id = "cryo_bruiser"
+display_name = "Cryo Bruiser"
+summary = "Cryo family tuned for bruiser behavior."

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AttackResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/attack_resource.gd" id="1_jbcrl"]
+
+[resource]
+script = ExtResource("1_jbcrl")
+base_damage = 18.0
+attack_range = 92.0
+cooldown = 0.28
+ailment_buildup = 20.0
+radius = 14.0
+id = "player_light_attack"
+display_name = "Plasma Cutter"
+summary = "Player combat ability."

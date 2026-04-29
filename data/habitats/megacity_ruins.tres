@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="HabitatResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="1_ys0lo"]
+
+[resource]
+script = ExtResource("1_ys0lo")
+palette_primary = Color(0.1254902, 0.14509805, 0.21176471, 1)
+palette_secondary = Color(1, 0.84705883, 0.43529412, 1)
+ambient_color = Color(0.039215688, 0.047058824, 0.07058824, 1)
+hazard_element_id = "void"
+hazard_ailment_id = "shock"
+hazard_damage = 8.2
+spawn_bias_role = "skirmisher"
+enemy_weight_bias = {
+"skirmisher": 0.9,
+"void": 0.8
+}
+id = "megacity_ruins"
+display_name = "Megacity Ruins"
+summary = "Collapsed transit lanes and neon ghost-signage create dense crossfire."

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyMutationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="1_vcua0"]
+
+[resource]
+script = ExtResource("1_vcua0")
+category = "advanced"
+prefix = "Umbra"
+bonus_damage = 1.14
+bonus_speed = 1.1
+aggression_bonus = 1.18
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_shift = Color(0.7647059, 0.6313726, 1, 1)
+id = "umbra_shroud"
+display_name = "Umbra Shroud"
+summary = "Umbra Shroud modifier package."

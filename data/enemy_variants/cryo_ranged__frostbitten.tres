@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_gtb8e"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_jff3h"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_owx6w"]
+
+[sub_resource type="Resource" id="Resource_u0bnm"]
+script = ExtResource("1_gtb8e")
+role = "ranged"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 64.0
+base_shield = 34.0
+base_speed = 132.0
+base_damage = 14.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("cryo_ranged_attack")
+palette_color = Color(0.53333336, 0.88235295, 1, 1)
+id = "cryo_ranged"
+display_name = "Cryo Ranged"
+summary = "Cryo family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_lieeh"]
+script = ExtResource("2_jff3h")
+prefix = "Frostbitten"
+bonus_health = 1.06
+bonus_damage = 0.98
+bonus_speed = 0.94
+aggression_bonus = 0.96
+ailment_bonus = 1.14
+habitat_tags = PackedStringArray("cryo_tundra")
+palette_shift = Color(0.56078434, 0.9098039, 1, 1)
+id = "frostbitten"
+display_name = "Frostbitten"
+summary = "Frostbitten modifier package."
+
+[resource]
+script = ExtResource("3_owx6w")
+family = SubResource("Resource_u0bnm")
+mutation = SubResource("Resource_lieeh")
+role = "ranged"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 69.19680000000001
+base_shield = 33.388
+base_speed = 124.08
+base_damage = 13.994399999999999
+aggression = 1.0368
+attack_ids = PackedStringArray("cryo_ranged_attack")
+habitat_tags = PackedStringArray("cryo_tundra")
+palette_primary = Color(0.5423922, 0.8914118, 1, 1)
+palette_secondary = Color(0.6661961, 0.93145096, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "cryo_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "cryo_ranged__frostbitten"
+display_name = "Frostbitten Cryo Ranged"
+summary = "Cryo Ranged adapted for Frostbitten conditions."

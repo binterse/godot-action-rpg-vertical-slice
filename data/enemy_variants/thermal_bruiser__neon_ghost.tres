@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_xsx74"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_wjdsx"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_kk1x0"]
+
+[sub_resource type="Resource" id="Resource_hv1jd"]
+script = ExtResource("1_xsx74")
+role = "bruiser"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 118.0
+base_shield = 36.0
+base_speed = 102.0
+base_damage = 20.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("thermal_bruiser_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_bruiser"
+display_name = "Thermal Bruiser"
+summary = "Thermal family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_bep3x"]
+script = ExtResource("2_wjdsx")
+prefix = "Neon"
+suffix = "Ghost"
+bonus_health = 0.96
+bonus_damage = 1.1
+bonus_speed = 1.1
+aggression_bonus = 1.14
+habitat_tags = PackedStringArray("megacity_ruins")
+palette_shift = Color(1, 0.84705883, 0.43529412, 1)
+id = "neon_ghost"
+display_name = "Neon Ghost"
+summary = "Neon Ghost modifier package."
+
+[resource]
+script = ExtResource("3_kk1x0")
+family = SubResource("Resource_hv1jd")
+mutation = SubResource("Resource_bep3x")
+role = "bruiser"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 108.7488
+base_shield = 34.632
+base_speed = 112.2
+base_damage = 21.119999999999997
+aggression = 1.0943999999999998
+attack_ids = PackedStringArray("thermal_bruiser_attack")
+habitat_tags = PackedStringArray("megacity_ruins")
+palette_primary = Color(1, 0.6421177, 0.40376472, 1)
+palette_secondary = Color(1, 0.8837647, 0.57082355, 1)
+loot_ids = PackedStringArray("scrap_bundle", "thermal_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "thermal_bruiser__neon_ghost"
+display_name = "Neon Thermal Bruiser Ghost"
+summary = "Thermal Bruiser adapted for Neon Ghost conditions."

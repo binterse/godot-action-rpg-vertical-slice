@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_heq3i"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_kcpbr"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_bmvfh"]
+
+[sub_resource type="Resource" id="Resource_70v3p"]
+script = ExtResource("1_heq3i")
+role = "ranged"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 64.0
+base_shield = 28.0
+base_speed = 132.0
+base_damage = 16.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("thermal_ranged_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_ranged"
+display_name = "Thermal Ranged"
+summary = "Thermal family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_lp4tc"]
+script = ExtResource("2_kcpbr")
+prefix = "Relicbound"
+bonus_health = 1.08
+bonus_damage = 1.08
+bonus_speed = 0.98
+aggression_bonus = 1.08
+ailment_bonus = 1.14
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_shift = Color(0.7019608, 0.5529412, 1, 1)
+id = "relicbound"
+display_name = "Relicbound"
+summary = "Relicbound modifier package."
+
+[resource]
+script = ExtResource("3_bmvfh")
+family = SubResource("Resource_70v3p")
+mutation = SubResource("Resource_lp4tc")
+role = "ranged"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 66.3552
+base_shield = 27.608
+base_speed = 129.35999999999999
+base_damage = 16.5888
+aggression = 1.1664
+attack_ids = PackedStringArray("thermal_ranged_attack")
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_primary = Color(0.9016471, 0.54505885, 0.59011763, 1)
+palette_secondary = Color(0.7734902, 0.6602353, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "thermal_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "thermal_ranged__relicbound"
+display_name = "Relicbound Thermal Ranged"
+summary = "Thermal Ranged adapted for Relicbound conditions."

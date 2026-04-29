@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_7ejau"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_rswft"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_d70hn"]
+
+[sub_resource type="Resource" id="Resource_k3jeg"]
+script = ExtResource("1_7ejau")
+role = "skirmisher"
+element_id = "void"
+ailment_id = "shock"
+base_health = 72.0
+base_shield = 28.0
+base_speed = 166.0
+base_damage = 12.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("void_skirmisher_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_skirmisher"
+display_name = "Void Skirmisher"
+summary = "Void family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_n5cds"]
+script = ExtResource("2_rswft")
+prefix = "Radscarred"
+bonus_health = 1.06
+bonus_damage = 1.07
+bonus_speed = 1.04
+aggression_bonus = 1.1
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("irradiated_wasteland")
+palette_shift = Color(0.8352941, 0.83137256, 0.44705883, 1)
+id = "radscarred"
+display_name = "Radscarred"
+summary = "Radscarred modifier package."
+
+[resource]
+script = ExtResource("3_d70hn")
+family = SubResource("Resource_k3jeg")
+mutation = SubResource("Resource_n5cds")
+role = "skirmisher"
+element_id = "void"
+ailment_id = "shock"
+base_health = 74.79360000000001
+base_shield = 27.496
+base_speed = 172.64000000000001
+base_damage = 12.5832
+aggression = 1.342
+attack_ids = PackedStringArray("void_skirmisher_attack")
+habitat_tags = PackedStringArray("irradiated_wasteland")
+palette_primary = Color(0.74596083, 0.64482355, 0.8175294, 1)
+palette_secondary = Color(0.8748235, 0.87184316, 0.5797647, 1)
+loot_ids = PackedStringArray("scrap_bundle", "void_shard")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "void_skirmisher__radscarred"
+display_name = "Radscarred Void Skirmisher"
+summary = "Void Skirmisher adapted for Radscarred conditions."

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DifficultyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/difficulty_resource.gd" id="1_n5gsy"]
+
+[resource]
+script = ExtResource("1_n5gsy")
+enemy_health_mult = 1.34
+enemy_damage_mult = 1.24
+enemy_speed_mult = 1.1
+aggression_mult = 1.16
+spawn_pressure_mult = 1.28
+ailment_potency_mult = 1.16
+player_recovery_mult = 0.88
+id = "veteran"
+display_name = "Veteran"
+summary = "Veteran tuning for enemy pressure, aggression, and ailment strength."

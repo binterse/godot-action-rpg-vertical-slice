@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AttackResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/attack_resource.gd" id="1_uk58w"]
+
+[resource]
+script = ExtResource("1_uk58w")
+style = "ranged"
+element_id = "volt"
+base_damage = 14.0
+attack_range = 300.0
+cooldown = 1.2
+projectile_speed = 420.0
+ailment_buildup = 18.0
+radius = 8.0
+id = "volt_ranged_attack"
+display_name = "Volt Ranged"
+summary = "Volt package for ranged enemies."

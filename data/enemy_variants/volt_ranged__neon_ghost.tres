@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_pk5mj"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_o4kx6"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_dvtty"]
+
+[sub_resource type="Resource" id="Resource_shfjt"]
+script = ExtResource("1_pk5mj")
+role = "ranged"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 64.0
+base_shield = 28.0
+base_speed = 150.0
+base_damage = 14.0
+aggression = 1.1600000000000001
+default_attack_ids = PackedStringArray("volt_ranged_attack")
+palette_color = Color(1, 0.90588236, 0.45490196, 1)
+id = "volt_ranged"
+display_name = "Volt Ranged"
+summary = "Volt family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_bep3x"]
+script = ExtResource("2_o4kx6")
+prefix = "Neon"
+suffix = "Ghost"
+bonus_health = 0.96
+bonus_damage = 1.1
+bonus_speed = 1.1
+aggression_bonus = 1.14
+habitat_tags = PackedStringArray("megacity_ruins")
+palette_shift = Color(1, 0.84705883, 0.43529412, 1)
+id = "neon_ghost"
+display_name = "Neon Ghost"
+summary = "Neon Ghost modifier package."
+
+[resource]
+script = ExtResource("3_dvtty")
+family = SubResource("Resource_shfjt")
+mutation = SubResource("Resource_bep3x")
+role = "ranged"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 59.596799999999995
+base_shield = 26.936
+base_speed = 165.0
+base_damage = 14.938000000000002
+aggression = 1.3224
+attack_ids = PackedStringArray("volt_ranged_attack")
+habitat_tags = PackedStringArray("megacity_ruins")
+palette_primary = Color(1, 0.8864706, 0.44843137, 1)
+palette_secondary = Color(1, 0.8837647, 0.57082355, 1)
+loot_ids = PackedStringArray("scrap_bundle", "volt_cell")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "volt_ranged__neon_ghost"
+display_name = "Neon Volt Ranged Ghost"
+summary = "Volt Ranged adapted for Neon Ghost conditions."

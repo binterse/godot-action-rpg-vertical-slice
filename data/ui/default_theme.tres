@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UiThemeResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ui_theme_resource.gd" id="1_8lh1s"]
+
+[resource]
+script = ExtResource("1_8lh1s")
+panel = Color(0.06666667, 0.13333334, 0.21960784, 1)
+success = Color(0.50980395, 0.96862745, 0.65882355, 1)
+id = "default_theme"
+display_name = "Command Slate"
+summary = "Placeholder sci-fi UI colors for menus and HUD."

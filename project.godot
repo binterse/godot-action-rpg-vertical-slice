@@ -1,0 +1,26 @@
+; Engine configuration file.
+; Portable project kept fully inside this folder.
+
+config_version=5
+
+[application]
+config/name="godot-action-rpg-vertical-slice"
+run/main_scene="res://scenes/TitleScreen.tscn"
+config/features=PackedStringArray("4.6")
+boot_splash/show_image=false
+
+[autoload]
+GameDB="*res://scripts/autoload/game_db.gd"
+RunState="*res://scripts/autoload/run_state.gd"
+CombatRules="*res://scripts/autoload/combat_rules.gd"
+
+[display]
+window/size/viewport_width=1600
+window/size/viewport_height=900
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.0352941, 0.0470588, 0.0823529, 1)

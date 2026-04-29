@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AttackResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/attack_resource.gd" id="1_dpadi"]
+
+[resource]
+script = ExtResource("1_dpadi")
+element_id = "void"
+base_damage = 17.0
+attack_range = 78.0
+cooldown = 1.0
+ailment_buildup = 18.0
+id = "void_skirmisher_attack"
+display_name = "Void Skirmisher"
+summary = "Void package for skirmisher enemies."

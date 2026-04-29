@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_gjqvy"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_unld5"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_ctrvb"]
+
+[sub_resource type="Resource" id="Resource_u0bnm"]
+script = ExtResource("1_gjqvy")
+role = "ranged"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 64.0
+base_shield = 34.0
+base_speed = 132.0
+base_damage = 14.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("cryo_ranged_attack")
+palette_color = Color(0.53333336, 0.88235295, 1, 1)
+id = "cryo_ranged"
+display_name = "Cryo Ranged"
+summary = "Cryo family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_1iuto"]
+script = ExtResource("2_unld5")
+prefix = "Slagforged"
+bonus_health = 1.1
+bonus_damage = 1.08
+bonus_speed = 0.94
+aggression_bonus = 1.02
+ailment_bonus = 1.06
+habitat_tags = PackedStringArray("magma_foundry")
+palette_shift = Color(1, 0.5411765, 0.3882353, 1)
+id = "slagforged"
+display_name = "Slagforged"
+summary = "Slagforged modifier package."
+
+[resource]
+script = ExtResource("3_ctrvb")
+family = SubResource("Resource_u0bnm")
+mutation = SubResource("Resource_1iuto")
+role = "ranged"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 73.92000000000002
+base_shield = 33.66
+base_speed = 124.08
+base_damage = 15.876000000000001
+aggression = 1.1016000000000001
+attack_ids = PackedStringArray("cryo_ranged_attack")
+habitat_tags = PackedStringArray("magma_foundry")
+palette_primary = Color(0.68733335, 0.7697647, 0.79811764, 1)
+palette_secondary = Color(1, 0.6512941, 0.5350588, 1)
+loot_ids = PackedStringArray("scrap_bundle", "cryo_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "cryo_ranged__slagforged"
+display_name = "Slagforged Cryo Ranged"
+summary = "Cryo Ranged adapted for Slagforged conditions."

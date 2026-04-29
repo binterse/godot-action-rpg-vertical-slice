@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_lryg8"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_0h5hu"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_562og"]
+
+[sub_resource type="Resource" id="Resource_6ulnp"]
+script = ExtResource("1_lryg8")
+role = "bruiser"
+element_id = "void"
+ailment_id = "shock"
+base_health = 128.0
+base_shield = 46.0
+base_speed = 102.0
+base_damage = 18.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("void_bruiser_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_bruiser"
+display_name = "Void Bruiser"
+summary = "Void family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_lp4tc"]
+script = ExtResource("2_0h5hu")
+prefix = "Relicbound"
+bonus_health = 1.08
+bonus_damage = 1.08
+bonus_speed = 0.98
+aggression_bonus = 1.08
+ailment_bonus = 1.14
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_shift = Color(0.7019608, 0.5529412, 1, 1)
+id = "relicbound"
+display_name = "Relicbound"
+summary = "Relicbound modifier package."
+
+[resource]
+script = ExtResource("3_562og")
+family = SubResource("Resource_6ulnp")
+mutation = SubResource("Resource_lp4tc")
+role = "bruiser"
+element_id = "void"
+ailment_id = "shock"
+base_health = 135.4752
+base_shield = 45.356
+base_speed = 99.96
+base_damage = 19.0512
+aggression = 1.0368
+attack_ids = PackedStringArray("void_bruiser_attack")
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_primary = Color(0.7019608, 0.5529412, 1, 1)
+palette_secondary = Color(0.7734902, 0.6602353, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "void_shard")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "void_bruiser__relicbound"
+display_name = "Relicbound Void Bruiser"
+summary = "Void Bruiser adapted for Relicbound conditions."

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AttackResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/attack_resource.gd" id="1_tp1sp"]
+
+[resource]
+script = ExtResource("1_tp1sp")
+element_id = "volt"
+base_damage = 16.0
+attack_range = 78.0
+cooldown = 0.92
+ailment_buildup = 18.0
+id = "volt_skirmisher_attack"
+display_name = "Volt Skirmisher"
+summary = "Volt package for skirmisher enemies."

@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_jvgrk"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_sw5hw"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_kluko"]
+
+[sub_resource type="Resource" id="Resource_k3jeg"]
+script = ExtResource("1_jvgrk")
+role = "skirmisher"
+element_id = "void"
+ailment_id = "shock"
+base_health = 72.0
+base_shield = 28.0
+base_speed = 166.0
+base_damage = 12.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("void_skirmisher_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_skirmisher"
+display_name = "Void Skirmisher"
+summary = "Void family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_1iuto"]
+script = ExtResource("2_sw5hw")
+prefix = "Slagforged"
+bonus_health = 1.1
+bonus_damage = 1.08
+bonus_speed = 0.94
+aggression_bonus = 1.02
+ailment_bonus = 1.06
+habitat_tags = PackedStringArray("magma_foundry")
+palette_shift = Color(1, 0.5411765, 0.3882353, 1)
+id = "slagforged"
+display_name = "Slagforged"
+summary = "Slagforged modifier package."
+
+[resource]
+script = ExtResource("3_kluko")
+family = SubResource("Resource_k3jeg")
+mutation = SubResource("Resource_1iuto")
+role = "skirmisher"
+element_id = "void"
+ailment_id = "shock"
+base_health = 75.24
+base_shield = 27.72
+base_speed = 156.04
+base_damage = 12.312
+aggression = 1.2444
+attack_ids = PackedStringArray("void_skirmisher_attack")
+habitat_tags = PackedStringArray("magma_foundry")
+palette_primary = Color(0.8003137, 0.54905885, 0.79811764, 1)
+palette_secondary = Color(1, 0.6512941, 0.5350588, 1)
+loot_ids = PackedStringArray("scrap_bundle", "void_shard")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "void_skirmisher__slagforged"
+display_name = "Slagforged Void Skirmisher"
+summary = "Void Skirmisher adapted for Slagforged conditions."

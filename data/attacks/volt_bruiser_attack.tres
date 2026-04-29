@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AttackResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/attack_resource.gd" id="1_gfuqb"]
+
+[resource]
+script = ExtResource("1_gfuqb")
+element_id = "volt"
+base_damage = 22.0
+attack_range = 96.0
+cooldown = 1.45
+ailment_buildup = 24.0
+radius = 16.0
+id = "volt_bruiser_attack"
+display_name = "Volt Bruiser"
+summary = "Volt package for bruiser enemies."

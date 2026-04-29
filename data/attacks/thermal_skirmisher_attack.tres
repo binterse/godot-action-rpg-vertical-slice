@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AttackResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/attack_resource.gd" id="1_wenvi"]
+
+[resource]
+script = ExtResource("1_wenvi")
+element_id = "thermal"
+base_damage = 18.0
+attack_range = 78.0
+cooldown = 1.0
+ailment_buildup = 18.0
+id = "thermal_skirmisher_attack"
+display_name = "Thermal Skirmisher"
+summary = "Thermal package for skirmisher enemies."

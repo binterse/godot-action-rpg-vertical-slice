@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_x5ihe"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_f0i4s"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_k781k"]
+
+[sub_resource type="Resource" id="Resource_lfvxk"]
+script = ExtResource("1_x5ihe")
+role = "ranged"
+element_id = "void"
+ailment_id = "shock"
+base_health = 64.0
+base_shield = 38.0
+base_speed = 132.0
+base_damage = 14.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("void_ranged_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_ranged"
+display_name = "Void Ranged"
+summary = "Void family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_667l0"]
+script = ExtResource("2_f0i4s")
+prefix = "Sandscoured"
+bonus_health = 0.98
+bonus_damage = 1.06
+bonus_speed = 1.08
+aggression_bonus = 1.08
+habitat_tags = PackedStringArray("dune_sea")
+palette_shift = Color(0.9647059, 0.7058824, 0.37254903, 1)
+id = "sandscoured"
+display_name = "Sandscoured"
+summary = "Sandscoured modifier package."
+
+[resource]
+script = ExtResource("3_k781k")
+family = SubResource("Resource_lfvxk")
+mutation = SubResource("Resource_667l0")
+role = "ranged"
+element_id = "void"
+ailment_id = "shock"
+base_health = 62.0928
+base_shield = 36.708
+base_speed = 142.56
+base_damage = 14.6916
+aggression = 1.1664
+attack_ids = PackedStringArray("void_ranged_attack")
+habitat_tags = PackedStringArray("dune_sea")
+palette_primary = Color(0.78866667, 0.6034118, 0.7929412, 1)
+palette_secondary = Color(0.9731765, 0.7764706, 0.5231373, 1)
+loot_ids = PackedStringArray("scrap_bundle", "void_shard")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "void_ranged__sandscoured"
+display_name = "Sandscoured Void Ranged"
+summary = "Void Ranged adapted for Sandscoured conditions."

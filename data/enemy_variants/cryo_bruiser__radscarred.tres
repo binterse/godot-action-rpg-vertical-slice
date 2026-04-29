@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_lb5o8"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_idcj0"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_ej3kw"]
+
+[sub_resource type="Resource" id="Resource_1oa35"]
+script = ExtResource("1_lb5o8")
+role = "bruiser"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 118.0
+base_shield = 42.0
+base_speed = 94.0
+base_damage = 18.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("cryo_bruiser_attack")
+palette_color = Color(0.53333336, 0.88235295, 1, 1)
+id = "cryo_bruiser"
+display_name = "Cryo Bruiser"
+summary = "Cryo family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_n5cds"]
+script = ExtResource("2_idcj0")
+prefix = "Radscarred"
+bonus_health = 1.06
+bonus_damage = 1.07
+bonus_speed = 1.04
+aggression_bonus = 1.1
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("irradiated_wasteland")
+palette_shift = Color(0.8352941, 0.83137256, 0.44705883, 1)
+id = "radscarred"
+display_name = "Radscarred"
+summary = "Radscarred modifier package."
+
+[resource]
+script = ExtResource("3_ej3kw")
+family = SubResource("Resource_1oa35")
+mutation = SubResource("Resource_n5cds")
+role = "bruiser"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 127.58160000000001
+base_shield = 41.244
+base_speed = 97.76
+base_damage = 19.645200000000003
+aggression = 1.056
+attack_ids = PackedStringArray("cryo_bruiser_attack")
+habitat_tags = PackedStringArray("irradiated_wasteland")
+palette_primary = Color(0.6329804, 0.8655294, 0.8175294, 1)
+palette_secondary = Color(0.8748235, 0.87184316, 0.5797647, 1)
+loot_ids = PackedStringArray("scrap_bundle", "cryo_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "cryo_bruiser__radscarred"
+display_name = "Radscarred Cryo Bruiser"
+summary = "Cryo Bruiser adapted for Radscarred conditions."

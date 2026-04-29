@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyFamilyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_sy74h"]
+
+[resource]
+script = ExtResource("1_sy74h")
+role = "bruiser"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 126.0
+base_shield = 36.0
+base_speed = 102.0
+base_damage = 18.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("corrosive_bruiser_attack")
+palette_color = Color(0.5568628, 0.9607843, 0.54509807, 1)
+id = "corrosive_bruiser"
+display_name = "Corrosive Bruiser"
+summary = "Corrosive family tuned for bruiser behavior."

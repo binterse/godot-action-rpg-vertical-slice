@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EncounterTemplateResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/difficulty_resource.gd" id="1_tn7iv"]
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="2_yfu66"]
+[ext_resource type="Script" path="res://scripts/resources/encounter_template_resource.gd" id="3_avs5o"]
+
+[sub_resource type="Resource" id="Resource_ft3pr"]
+script = ExtResource("1_tn7iv")
+enemy_health_mult = 0.78
+enemy_damage_mult = 0.75
+enemy_speed_mult = 0.9
+aggression_mult = 0.85
+spawn_pressure_mult = 0.9
+ailment_potency_mult = 0.8
+player_recovery_mult = 1.3
+id = "story"
+display_name = "Story"
+summary = "Story tuning for enemy pressure, aggression, and ailment strength."
+
+[sub_resource type="Resource" id="Resource_iqlvj"]
+script = ExtResource("2_yfu66")
+palette_primary = Color(0.15294118, 0.25490198, 0.14901961, 1)
+palette_secondary = Color(0.6117647, 0.93333334, 0.38431373, 1)
+ambient_color = Color(0.03529412, 0.06666667, 0.03137255, 1)
+hazard_element_id = "corrosive"
+hazard_ailment_id = "rupture"
+hazard_damage = 8.5
+hazard_interval = 3.3
+spawn_bias_role = "bruiser"
+enemy_weight_bias = {
+"bruiser": 0.8,
+"corrosive": 1.1
+}
+id = "toxic_marsh"
+display_name = "Toxic Marsh"
+summary = "Viscous pools and chemical haze punish lingering movement."
+
+[resource]
+script = ExtResource("3_avs5o")
+habitat = SubResource("Resource_iqlvj")
+difficulty = SubResource("Resource_ft3pr")
+allowed_enemy_ids = PackedStringArray("corrosive_bruiser__assault_doctrine", "corrosive_bruiser__bogslick", "corrosive_bruiser__phase_tuned", "corrosive_bruiser__regen_lattice", "corrosive_bruiser__siege_frame", "corrosive_bruiser__umbra_shroud", "corrosive_ranged__assault_doctrine", "corrosive_ranged__bogslick", "corrosive_ranged__phase_tuned", "corrosive_ranged__regen_lattice", "corrosive_ranged__siege_frame", "corrosive_ranged__umbra_shroud", "corrosive_skirmisher__assault_doctrine", "corrosive_skirmisher__bogslick", "corrosive_skirmisher__phase_tuned", "corrosive_skirmisher__regen_lattice", "corrosive_skirmisher__siege_frame", "corrosive_skirmisher__umbra_shroud", "cryo_bruiser__assault_doctrine", "cryo_bruiser__bogslick", "cryo_bruiser__phase_tuned", "cryo_bruiser__regen_lattice", "cryo_bruiser__siege_frame", "cryo_bruiser__umbra_shroud", "cryo_ranged__assault_doctrine", "cryo_ranged__bogslick", "cryo_ranged__phase_tuned", "cryo_ranged__regen_lattice", "cryo_ranged__siege_frame", "cryo_ranged__umbra_shroud", "cryo_skirmisher__assault_doctrine", "cryo_skirmisher__bogslick", "cryo_skirmisher__phase_tuned", "cryo_skirmisher__regen_lattice", "cryo_skirmisher__siege_frame", "cryo_skirmisher__umbra_shroud", "thermal_bruiser__assault_doctrine", "thermal_bruiser__bogslick", "thermal_bruiser__phase_tuned", "thermal_bruiser__regen_lattice", "thermal_bruiser__siege_frame", "thermal_bruiser__umbra_shroud", "thermal_ranged__assault_doctrine", "thermal_ranged__bogslick", "thermal_ranged__phase_tuned", "thermal_ranged__regen_lattice", "thermal_ranged__siege_frame", "thermal_ranged__umbra_shroud", "thermal_skirmisher__assault_doctrine", "thermal_skirmisher__bogslick", "thermal_skirmisher__phase_tuned", "thermal_skirmisher__regen_lattice", "thermal_skirmisher__siege_frame", "thermal_skirmisher__umbra_shroud", "void_bruiser__assault_doctrine", "void_bruiser__bogslick", "void_bruiser__phase_tuned", "void_bruiser__regen_lattice", "void_bruiser__siege_frame", "void_bruiser__umbra_shroud", "void_ranged__assault_doctrine", "void_ranged__bogslick", "void_ranged__phase_tuned", "void_ranged__regen_lattice", "void_ranged__siege_frame", "void_ranged__umbra_shroud", "void_skirmisher__assault_doctrine", "void_skirmisher__bogslick", "void_skirmisher__phase_tuned", "void_skirmisher__regen_lattice", "void_skirmisher__siege_frame", "void_skirmisher__umbra_shroud", "volt_bruiser__assault_doctrine", "volt_bruiser__bogslick", "volt_bruiser__phase_tuned", "volt_bruiser__regen_lattice", "volt_bruiser__siege_frame", "volt_bruiser__umbra_shroud", "volt_ranged__assault_doctrine", "volt_ranged__bogslick", "volt_ranged__phase_tuned", "volt_ranged__regen_lattice", "volt_ranged__siege_frame", "volt_ranged__umbra_shroud", "volt_skirmisher__assault_doctrine", "volt_skirmisher__bogslick", "volt_skirmisher__phase_tuned", "volt_skirmisher__regen_lattice", "volt_skirmisher__siege_frame", "volt_skirmisher__umbra_shroud")
+base_wave_size = 2
+reward_credits = 195
+champion_chance = 0.05
+boss_enemy_id = "corrosive_bruiser__assault_doctrine"
+id = "toxic_marsh__story"
+display_name = "Toxic Marsh Story Sweep"
+summary = "Wave encounter for Toxic Marsh on Story."

@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_1mh0f"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_1hrgm"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_kxwtl"]
+
+[sub_resource type="Resource" id="Resource_k4pp4"]
+script = ExtResource("1_1mh0f")
+role = "skirmisher"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 80.0
+base_shield = 18.0
+base_speed = 166.0
+base_damage = 12.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("corrosive_skirmisher_attack")
+palette_color = Color(0.5568628, 0.9607843, 0.54509807, 1)
+id = "corrosive_skirmisher"
+display_name = "Corrosive Skirmisher"
+summary = "Corrosive family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_bep3x"]
+script = ExtResource("2_1hrgm")
+prefix = "Neon"
+suffix = "Ghost"
+bonus_health = 0.96
+bonus_damage = 1.1
+bonus_speed = 1.1
+aggression_bonus = 1.14
+habitat_tags = PackedStringArray("megacity_ruins")
+palette_shift = Color(1, 0.84705883, 0.43529412, 1)
+id = "neon_ghost"
+display_name = "Neon Ghost"
+summary = "Neon Ghost modifier package."
+
+[resource]
+script = ExtResource("3_kxwtl")
+family = SubResource("Resource_k4pp4")
+mutation = SubResource("Resource_bep3x")
+role = "skirmisher"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 76.032
+base_shield = 17.316
+base_speed = 182.60000000000002
+base_damage = 13.068000000000001
+aggression = 1.3907999999999998
+attack_ids = PackedStringArray("corrosive_skirmisher_attack")
+habitat_tags = PackedStringArray("megacity_ruins")
+palette_primary = Color(0.70309806, 0.9232549, 0.50886273, 1)
+palette_secondary = Color(1, 0.8837647, 0.57082355, 1)
+loot_ids = PackedStringArray("scrap_bundle", "corrosive_resin")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "corrosive_skirmisher__neon_ghost"
+display_name = "Neon Corrosive Skirmisher Ghost"
+summary = "Corrosive Skirmisher adapted for Neon Ghost conditions."

@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_s6tcr"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_pcws1"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_v06n5"]
+
+[sub_resource type="Resource" id="Resource_6ulnp"]
+script = ExtResource("1_s6tcr")
+role = "bruiser"
+element_id = "void"
+ailment_id = "shock"
+base_health = 128.0
+base_shield = 46.0
+base_speed = 102.0
+base_damage = 18.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("void_bruiser_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_bruiser"
+display_name = "Void Bruiser"
+summary = "Void family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_pf6a7"]
+script = ExtResource("2_pcws1")
+category = "advanced"
+prefix = "Regen"
+suffix = "Lattice"
+bonus_health = 1.12
+bonus_damage = 0.98
+ailment_bonus = 1.14
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_shift = Color(0.54901963, 0.9647059, 0.79607844, 1)
+id = "regen_lattice"
+display_name = "Regen Lattice"
+summary = "Regen Lattice modifier package."
+
+[resource]
+script = ExtResource("3_v06n5")
+family = SubResource("Resource_6ulnp")
+mutation = SubResource("Resource_pf6a7")
+role = "bruiser"
+element_id = "void"
+ailment_id = "shock"
+base_health = 143.36
+base_shield = 45.724
+base_speed = 102.0
+base_damage = 17.64
+aggression = 0.96
+attack_ids = PackedStringArray("void_bruiser_attack")
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_primary = Color(0.6514902, 0.6888236, 0.9327059, 1)
+palette_secondary = Color(0.65725493, 0.9731765, 0.84501964, 1)
+loot_ids = PackedStringArray("scrap_bundle", "void_shard")
+difficulty_bias = {
+"cataclysm": 1.12,
+"mythic": 1.06
+}
+id = "void_bruiser__regen_lattice"
+display_name = "Regen Void Bruiser Lattice"
+summary = "Void Bruiser adapted for Regen Lattice conditions."

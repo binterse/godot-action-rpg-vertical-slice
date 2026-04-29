@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HabitatResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="1_k8fr6"]
+
+[resource]
+script = ExtResource("1_k8fr6")
+palette_primary = Color(0.30980393, 0.11372549, 0.078431375, 1)
+palette_secondary = Color(1, 0.5411765, 0.3882353, 1)
+ambient_color = Color(0.08235294, 0.03137255, 0.023529412, 1)
+hazard_element_id = "thermal"
+hazard_ailment_id = "burn"
+hazard_damage = 9.0
+hazard_interval = 2.9
+spawn_bias_role = "bruiser"
+enemy_weight_bias = {
+"bruiser": 1.1,
+"thermal": 1.0
+}
+id = "magma_foundry"
+display_name = "Magma Foundry"
+summary = "Molten channels and ruptured industrial vents flood the arena with heat."

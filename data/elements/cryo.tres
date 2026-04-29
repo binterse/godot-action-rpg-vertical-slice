@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ElementResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/element_resource.gd" id="1_q7lxk"]
+
+[resource]
+script = ExtResource("1_q7lxk")
+color = Color(0.53333336, 0.88235295, 1, 1)
+status_id = "freeze"
+strong_against_id = "corrosive"
+weak_against_id = "thermal"
+id = "cryo"
+display_name = "Cryo"
+summary = "Slowing precision damage with strong control tools."

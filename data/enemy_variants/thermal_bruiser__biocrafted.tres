@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_b67j2"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_aqi14"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_fj37u"]
+
+[sub_resource type="Resource" id="Resource_hv1jd"]
+script = ExtResource("1_b67j2")
+role = "bruiser"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 118.0
+base_shield = 36.0
+base_speed = 102.0
+base_damage = 20.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("thermal_bruiser_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_bruiser"
+display_name = "Thermal Bruiser"
+summary = "Thermal family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_4w7i7"]
+script = ExtResource("2_aqi14")
+prefix = "Biocrafted"
+bonus_health = 1.04
+bonus_damage = 1.02
+aggression_bonus = 1.06
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("biotech_lab")
+palette_shift = Color(0.4862745, 0.9411765, 0.8156863, 1)
+id = "biocrafted"
+display_name = "Biocrafted"
+summary = "Biocrafted modifier package."
+
+[resource]
+script = ExtResource("3_fj37u")
+family = SubResource("Resource_hv1jd")
+mutation = SubResource("Resource_4w7i7")
+role = "bruiser"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 127.6288
+base_shield = 35.208
+base_speed = 102.0
+base_damage = 21.215999999999998
+aggression = 1.0176
+attack_ids = PackedStringArray("thermal_bruiser_attack")
+habitat_tags = PackedStringArray("biotech_lab")
+palette_primary = Color(0.83047056, 0.6731765, 0.52929413, 1)
+palette_secondary = Color(0.60956866, 0.95529413, 0.8599216, 1)
+loot_ids = PackedStringArray("scrap_bundle", "thermal_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "thermal_bruiser__biocrafted"
+display_name = "Biocrafted Thermal Bruiser"
+summary = "Thermal Bruiser adapted for Biocrafted conditions."

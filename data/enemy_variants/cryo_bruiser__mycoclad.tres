@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_xeuov"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_vm207"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_kfsqn"]
+
+[sub_resource type="Resource" id="Resource_1oa35"]
+script = ExtResource("1_xeuov")
+role = "bruiser"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 118.0
+base_shield = 42.0
+base_speed = 94.0
+base_damage = 18.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("cryo_bruiser_attack")
+palette_color = Color(0.53333336, 0.88235295, 1, 1)
+id = "cryo_bruiser"
+display_name = "Cryo Bruiser"
+summary = "Cryo family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_t2p5m"]
+script = ExtResource("2_vm207")
+prefix = "Mycoclad"
+bonus_health = 1.02
+bonus_damage = 1.04
+bonus_speed = 1.02
+aggression_bonus = 1.06
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("fungal_jungle")
+palette_shift = Color(0.4745098, 0.9647059, 0.65882355, 1)
+id = "mycoclad"
+display_name = "Mycoclad"
+summary = "Mycoclad modifier package."
+
+[resource]
+script = ExtResource("3_kfsqn")
+family = SubResource("Resource_1oa35")
+mutation = SubResource("Resource_t2p5m")
+role = "bruiser"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 117.9528
+base_shield = 40.908
+base_speed = 95.88
+base_damage = 18.345599999999997
+aggression = 1.0176
+attack_ids = PackedStringArray("cryo_bruiser_attack")
+habitat_tags = PackedStringArray("fungal_jungle")
+palette_primary = Color(0.51392156, 0.90952945, 0.8874118, 1)
+palette_secondary = Color(0.6006274, 0.9731765, 0.7407059, 1)
+loot_ids = PackedStringArray("scrap_bundle", "cryo_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "cryo_bruiser__mycoclad"
+display_name = "Mycoclad Cryo Bruiser"
+summary = "Cryo Bruiser adapted for Mycoclad conditions."

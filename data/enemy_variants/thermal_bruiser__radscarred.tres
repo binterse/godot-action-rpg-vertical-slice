@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_bt085"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_u41fp"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_m6tv0"]
+
+[sub_resource type="Resource" id="Resource_hv1jd"]
+script = ExtResource("1_bt085")
+role = "bruiser"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 118.0
+base_shield = 36.0
+base_speed = 102.0
+base_damage = 20.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("thermal_bruiser_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_bruiser"
+display_name = "Thermal Bruiser"
+summary = "Thermal family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_n5cds"]
+script = ExtResource("2_u41fp")
+prefix = "Radscarred"
+bonus_health = 1.06
+bonus_damage = 1.07
+bonus_speed = 1.04
+aggression_bonus = 1.1
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("irradiated_wasteland")
+palette_shift = Color(0.8352941, 0.83137256, 0.44705883, 1)
+id = "radscarred"
+display_name = "Radscarred"
+summary = "Radscarred modifier package."
+
+[resource]
+script = ExtResource("3_m6tv0")
+family = SubResource("Resource_hv1jd")
+mutation = SubResource("Resource_n5cds")
+role = "bruiser"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 120.0768
+base_shield = 35.352
+base_speed = 106.08
+base_damage = 20.544
+aggression = 1.056
+attack_ids = PackedStringArray("thermal_bruiser_attack")
+habitat_tags = PackedStringArray("irradiated_wasteland")
+palette_primary = Color(0.94564706, 0.6369412, 0.40764707, 1)
+palette_secondary = Color(0.8748235, 0.87184316, 0.5797647, 1)
+loot_ids = PackedStringArray("scrap_bundle", "thermal_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "thermal_bruiser__radscarred"
+display_name = "Radscarred Thermal Bruiser"
+summary = "Thermal Bruiser adapted for Radscarred conditions."

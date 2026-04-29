@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_x3gt0"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_ggncs"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_8cucw"]
+
+[sub_resource type="Resource" id="Resource_fbq4n"]
+script = ExtResource("1_x3gt0")
+role = "skirmisher"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 72.0
+base_shield = 18.0
+base_speed = 184.0
+base_damage = 12.0
+aggression = 1.3
+default_attack_ids = PackedStringArray("volt_skirmisher_attack")
+palette_color = Color(1, 0.90588236, 0.45490196, 1)
+id = "volt_skirmisher"
+display_name = "Volt Skirmisher"
+summary = "Volt family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_4w7i7"]
+script = ExtResource("2_ggncs")
+prefix = "Biocrafted"
+bonus_health = 1.04
+bonus_damage = 1.02
+aggression_bonus = 1.06
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("biotech_lab")
+palette_shift = Color(0.4862745, 0.9411765, 0.8156863, 1)
+id = "biocrafted"
+display_name = "Biocrafted"
+summary = "Biocrafted modifier package."
+
+[resource]
+script = ExtResource("3_8cucw")
+family = SubResource("Resource_fbq4n")
+mutation = SubResource("Resource_4w7i7")
+role = "skirmisher"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 77.1264
+base_shield = 17.604
+base_speed = 184.0
+base_damage = 12.6072
+aggression = 1.3780000000000001
+attack_ids = PackedStringArray("volt_skirmisher_attack")
+habitat_tags = PackedStringArray("biotech_lab")
+palette_primary = Color(0.83047056, 0.9175294, 0.5739608, 1)
+palette_secondary = Color(0.60956866, 0.95529413, 0.8599216, 1)
+loot_ids = PackedStringArray("scrap_bundle", "volt_cell")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "volt_skirmisher__biocrafted"
+display_name = "Biocrafted Volt Skirmisher"
+summary = "Volt Skirmisher adapted for Biocrafted conditions."

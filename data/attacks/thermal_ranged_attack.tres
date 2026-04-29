@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AttackResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/attack_resource.gd" id="1_srukc"]
+
+[resource]
+script = ExtResource("1_srukc")
+style = "ranged"
+element_id = "thermal"
+base_damage = 16.0
+attack_range = 300.0
+cooldown = 1.2
+projectile_speed = 420.0
+ailment_buildup = 18.0
+radius = 8.0
+id = "thermal_ranged_attack"
+display_name = "Thermal Ranged"
+summary = "Thermal package for ranged enemies."

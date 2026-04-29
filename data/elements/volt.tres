@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ElementResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/element_resource.gd" id="1_kq0mf"]
+
+[resource]
+script = ExtResource("1_kq0mf")
+color = Color(1, 0.90588236, 0.45490196, 1)
+status_id = "shock"
+strong_against_id = "void"
+weak_against_id = "corrosive"
+id = "volt"
+display_name = "Volt"
+summary = "Fast disruptive output that punishes unstable targets."

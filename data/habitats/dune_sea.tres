@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HabitatResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="1_33w2t"]
+
+[resource]
+script = ExtResource("1_33w2t")
+palette_primary = Color(0.3529412, 0.23137255, 0.1254902, 1)
+palette_secondary = Color(0.9764706, 0.7019608, 0.35686275, 1)
+ambient_color = Color(0.105882354, 0.07058824, 0.02745098, 1)
+hazard_element_id = "thermal"
+hazard_ailment_id = "burn"
+hazard_damage = 8.0
+hazard_interval = 3.2
+spawn_bias_role = "skirmisher"
+enemy_weight_bias = {
+"skirmisher": 1.0,
+"thermal": 0.8
+}
+id = "dune_sea"
+display_name = "Dune Sea"
+summary = "Wind-cut dunes, searing sightlines, and drifting heat distortion."

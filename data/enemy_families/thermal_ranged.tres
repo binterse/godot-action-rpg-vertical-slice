@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyFamilyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_fmjt2"]
+
+[resource]
+script = ExtResource("1_fmjt2")
+role = "ranged"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 64.0
+base_shield = 28.0
+base_speed = 132.0
+base_damage = 16.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("thermal_ranged_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_ranged"
+display_name = "Thermal Ranged"
+summary = "Thermal family tuned for ranged behavior."

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StatusAilmentResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/status_ailment_resource.gd" id="1_js8ic"]
+
+[resource]
+script = ExtResource("1_js8ic")
+color = Color(1, 0.5411765, 0.3882353, 1)
+effect_kind = "dot"
+base_duration = 4.0
+max_stacks = 3
+id = "burn"
+display_name = "Burn"
+summary = "Applies sustained thermal damage over time."

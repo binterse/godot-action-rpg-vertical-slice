@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyMutationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="1_tkg1i"]
+
+[resource]
+script = ExtResource("1_tkg1i")
+prefix = "Facetide"
+bonus_health = 0.98
+bonus_damage = 1.08
+bonus_speed = 1.03
+aggression_bonus = 1.02
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("crystal_cavern")
+palette_shift = Color(0.6117647, 0.7764706, 1, 1)
+id = "facetide"
+display_name = "Facetide"
+summary = "Facetide modifier package."

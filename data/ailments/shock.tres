@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="StatusAilmentResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/status_ailment_resource.gd" id="1_rn2wg"]
+
+[resource]
+script = ExtResource("1_rn2wg")
+color = Color(1, 0.90588236, 0.47843137, 1)
+effect_kind = "disrupt"
+base_duration = 3.4
+max_stacks = 2
+tick_interval = 1.2
+potency = 0.9
+id = "shock"
+display_name = "Shock"
+summary = "Disrupts output and causes periodic damage spikes."

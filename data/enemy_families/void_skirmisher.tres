@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyFamilyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_c4646"]
+
+[resource]
+script = ExtResource("1_c4646")
+role = "skirmisher"
+element_id = "void"
+ailment_id = "shock"
+base_health = 72.0
+base_shield = 28.0
+base_speed = 166.0
+base_damage = 12.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("void_skirmisher_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_skirmisher"
+display_name = "Void Skirmisher"
+summary = "Void family tuned for skirmisher behavior."

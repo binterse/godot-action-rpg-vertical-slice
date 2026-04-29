@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EnemyMutationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="1_24d43"]
+
+[resource]
+script = ExtResource("1_24d43")
+prefix = "Biocrafted"
+bonus_health = 1.04
+bonus_damage = 1.02
+aggression_bonus = 1.06
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("biotech_lab")
+palette_shift = Color(0.4862745, 0.9411765, 0.8156863, 1)
+id = "biocrafted"
+display_name = "Biocrafted"
+summary = "Biocrafted modifier package."

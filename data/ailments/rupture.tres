@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StatusAilmentResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/status_ailment_resource.gd" id="1_4d0xu"]
+
+[resource]
+script = ExtResource("1_4d0xu")
+color = Color(0.5882353, 0.9607843, 0.49019608, 1)
+effect_kind = "vulnerable"
+base_duration = 4.6
+max_stacks = 3
+id = "rupture"
+display_name = "Rupture"
+summary = "Destabilizes armor and amplifies incoming damage."

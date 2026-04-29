@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_enmdo"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_4rn6q"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_6gepy"]
+
+[sub_resource type="Resource" id="Resource_fm45i"]
+script = ExtResource("1_enmdo")
+role = "bruiser"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 118.0
+base_shield = 36.0
+base_damage = 18.0
+aggression = 1.04
+default_attack_ids = PackedStringArray("volt_bruiser_attack")
+palette_color = Color(1, 0.90588236, 0.45490196, 1)
+id = "volt_bruiser"
+display_name = "Volt Bruiser"
+summary = "Volt family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_30t1i"]
+script = ExtResource("2_4rn6q")
+category = "advanced"
+prefix = "Phase"
+bonus_health = 0.96
+bonus_damage = 1.08
+bonus_speed = 1.16
+aggression_bonus = 1.12
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_shift = Color(0.56078434, 0.7137255, 1, 1)
+id = "phase_tuned"
+display_name = "Phase Tuned"
+summary = "Phase Tuned modifier package."
+
+[resource]
+script = ExtResource("3_6gepy")
+family = SubResource("Resource_fm45i")
+mutation = SubResource("Resource_30t1i")
+role = "bruiser"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 107.616
+base_shield = 34.632
+base_speed = 139.2
+base_damage = 18.468
+aggression = 1.1648
+attack_ids = PackedStringArray("volt_bruiser_attack")
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_primary = Color(0.8550588, 0.8424706, 0.63478434, 1)
+palette_secondary = Color(0.6661961, 0.78243136, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "volt_cell")
+difficulty_bias = {
+"cataclysm": 1.12,
+"mythic": 1.06
+}
+id = "volt_bruiser__phase_tuned"
+display_name = "Phase Volt Bruiser"
+summary = "Volt Bruiser adapted for Phase Tuned conditions."

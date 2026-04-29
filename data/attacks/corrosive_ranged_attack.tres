@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AttackResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/attack_resource.gd" id="1_kykq3"]
+
+[resource]
+script = ExtResource("1_kykq3")
+style = "ranged"
+element_id = "corrosive"
+base_damage = 14.0
+attack_range = 300.0
+cooldown = 1.2
+projectile_speed = 420.0
+ailment_buildup = 18.0
+radius = 8.0
+id = "corrosive_ranged_attack"
+display_name = "Corrosive Ranged"
+summary = "Corrosive package for ranged enemies."

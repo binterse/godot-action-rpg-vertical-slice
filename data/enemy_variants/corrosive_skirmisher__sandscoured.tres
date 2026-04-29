@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_4cvpu"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_s3bg7"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_jwsrf"]
+
+[sub_resource type="Resource" id="Resource_k4pp4"]
+script = ExtResource("1_4cvpu")
+role = "skirmisher"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 80.0
+base_shield = 18.0
+base_speed = 166.0
+base_damage = 12.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("corrosive_skirmisher_attack")
+palette_color = Color(0.5568628, 0.9607843, 0.54509807, 1)
+id = "corrosive_skirmisher"
+display_name = "Corrosive Skirmisher"
+summary = "Corrosive family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_667l0"]
+script = ExtResource("2_s3bg7")
+prefix = "Sandscoured"
+bonus_health = 0.98
+bonus_damage = 1.06
+bonus_speed = 1.08
+aggression_bonus = 1.08
+habitat_tags = PackedStringArray("dune_sea")
+palette_shift = Color(0.9647059, 0.7058824, 0.37254903, 1)
+id = "sandscoured"
+display_name = "Sandscoured"
+summary = "Sandscoured modifier package."
+
+[resource]
+script = ExtResource("3_jwsrf")
+family = SubResource("Resource_k4pp4")
+mutation = SubResource("Resource_667l0")
+role = "skirmisher"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 79.18400000000001
+base_shield = 17.387999999999998
+base_speed = 179.28
+base_damage = 12.8472
+aggression = 1.3176
+attack_ids = PackedStringArray("corrosive_skirmisher_attack")
+habitat_tags = PackedStringArray("dune_sea")
+palette_primary = Color(0.691451, 0.87666667, 0.48815688, 1)
+palette_secondary = Color(0.9731765, 0.7764706, 0.5231373, 1)
+loot_ids = PackedStringArray("scrap_bundle", "corrosive_resin")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "corrosive_skirmisher__sandscoured"
+display_name = "Sandscoured Corrosive Skirmisher"
+summary = "Corrosive Skirmisher adapted for Sandscoured conditions."

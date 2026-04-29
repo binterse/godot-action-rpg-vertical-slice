@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_4ak24"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_uwiup"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_ghvoe"]
+
+[sub_resource type="Resource" id="Resource_1oa35"]
+script = ExtResource("1_4ak24")
+role = "bruiser"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 118.0
+base_shield = 42.0
+base_speed = 94.0
+base_damage = 18.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("cryo_bruiser_attack")
+palette_color = Color(0.53333336, 0.88235295, 1, 1)
+id = "cryo_bruiser"
+display_name = "Cryo Bruiser"
+summary = "Cryo family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_5yf2r"]
+script = ExtResource("2_uwiup")
+prefix = "Wreckborn"
+bonus_damage = 1.02
+bonus_speed = 0.98
+aggression_bonus = 1.04
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("orbital_wreckage")
+palette_shift = Color(0.54509807, 0.827451, 1, 1)
+id = "wreckborn"
+display_name = "Wreckborn"
+summary = "Wreckborn modifier package."
+
+[resource]
+script = ExtResource("3_ghvoe")
+family = SubResource("Resource_1oa35")
+mutation = SubResource("Resource_5yf2r")
+role = "bruiser"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 116.82
+base_shield = 40.74
+base_speed = 92.12
+base_damage = 18.1764
+aggression = 0.9984
+attack_ids = PackedStringArray("cryo_bruiser_attack")
+habitat_tags = PackedStringArray("orbital_wreckage")
+palette_primary = Color(0.5372157, 0.8642353, 1, 1)
+palette_secondary = Color(0.6542745, 0.86886275, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "cryo_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "cryo_bruiser__wreckborn"
+display_name = "Wreckborn Cryo Bruiser"
+summary = "Cryo Bruiser adapted for Wreckborn conditions."

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyFamilyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_v0edj"]
+
+[resource]
+script = ExtResource("1_v0edj")
+role = "skirmisher"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 72.0
+base_shield = 18.0
+base_speed = 166.0
+base_damage = 14.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("thermal_skirmisher_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_skirmisher"
+display_name = "Thermal Skirmisher"
+summary = "Thermal family tuned for skirmisher behavior."

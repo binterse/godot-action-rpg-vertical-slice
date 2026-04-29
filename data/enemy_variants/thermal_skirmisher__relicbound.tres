@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_kjslg"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_fbear"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_x5ffh"]
+
+[sub_resource type="Resource" id="Resource_sdlli"]
+script = ExtResource("1_kjslg")
+role = "skirmisher"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 72.0
+base_shield = 18.0
+base_speed = 166.0
+base_damage = 14.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("thermal_skirmisher_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_skirmisher"
+display_name = "Thermal Skirmisher"
+summary = "Thermal family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_lp4tc"]
+script = ExtResource("2_fbear")
+prefix = "Relicbound"
+bonus_health = 1.08
+bonus_damage = 1.08
+bonus_speed = 0.98
+aggression_bonus = 1.08
+ailment_bonus = 1.14
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_shift = Color(0.7019608, 0.5529412, 1, 1)
+id = "relicbound"
+display_name = "Relicbound"
+summary = "Relicbound modifier package."
+
+[resource]
+script = ExtResource("3_x5ffh")
+family = SubResource("Resource_sdlli")
+mutation = SubResource("Resource_lp4tc")
+role = "skirmisher"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 75.4272
+base_shield = 17.748
+base_speed = 162.68
+base_damage = 14.666400000000001
+aggression = 1.3176
+attack_ids = PackedStringArray("thermal_skirmisher_attack")
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_primary = Color(0.9016471, 0.54505885, 0.59011763, 1)
+palette_secondary = Color(0.7734902, 0.6602353, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "thermal_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "thermal_skirmisher__relicbound"
+display_name = "Relicbound Thermal Skirmisher"
+summary = "Thermal Skirmisher adapted for Relicbound conditions."

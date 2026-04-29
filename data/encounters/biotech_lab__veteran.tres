@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EncounterTemplateResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/difficulty_resource.gd" id="1_tk2gi"]
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="2_v1gcd"]
+[ext_resource type="Script" path="res://scripts/resources/encounter_template_resource.gd" id="3_okf1y"]
+
+[sub_resource type="Resource" id="Resource_cjvq2"]
+script = ExtResource("1_tk2gi")
+enemy_health_mult = 1.34
+enemy_damage_mult = 1.24
+enemy_speed_mult = 1.1
+aggression_mult = 1.16
+spawn_pressure_mult = 1.28
+ailment_potency_mult = 1.16
+player_recovery_mult = 0.88
+id = "veteran"
+display_name = "Veteran"
+summary = "Veteran tuning for enemy pressure, aggression, and ailment strength."
+
+[sub_resource type="Resource" id="Resource_tms35"]
+script = ExtResource("2_v1gcd")
+palette_primary = Color(0.078431375, 0.19215687, 0.18431373, 1)
+palette_secondary = Color(0.4862745, 0.9411765, 0.8156863, 1)
+ambient_color = Color(0.02745098, 0.0627451, 0.05882353, 1)
+hazard_element_id = "corrosive"
+hazard_ailment_id = "rupture"
+hazard_damage = 7.6
+hazard_interval = 3.2
+spawn_bias_role = "skirmisher"
+enemy_weight_bias = {
+"corrosive": 1.0,
+"skirmisher": 0.7
+}
+id = "biotech_lab"
+display_name = "Biotech Lab"
+summary = "Sterile chambers bloom into weaponized growth at a moment's notice."
+
+[resource]
+script = ExtResource("3_okf1y")
+habitat = SubResource("Resource_tms35")
+difficulty = SubResource("Resource_cjvq2")
+allowed_enemy_ids = PackedStringArray("corrosive_bruiser__assault_doctrine", "corrosive_bruiser__biocrafted", "corrosive_bruiser__phase_tuned", "corrosive_bruiser__regen_lattice", "corrosive_bruiser__siege_frame", "corrosive_bruiser__umbra_shroud", "corrosive_ranged__assault_doctrine", "corrosive_ranged__biocrafted", "corrosive_ranged__phase_tuned", "corrosive_ranged__regen_lattice", "corrosive_ranged__siege_frame", "corrosive_ranged__umbra_shroud", "corrosive_skirmisher__assault_doctrine", "corrosive_skirmisher__biocrafted", "corrosive_skirmisher__phase_tuned", "corrosive_skirmisher__regen_lattice", "corrosive_skirmisher__siege_frame", "corrosive_skirmisher__umbra_shroud", "cryo_bruiser__assault_doctrine", "cryo_bruiser__biocrafted", "cryo_bruiser__phase_tuned", "cryo_bruiser__regen_lattice", "cryo_bruiser__siege_frame", "cryo_bruiser__umbra_shroud", "cryo_ranged__assault_doctrine", "cryo_ranged__biocrafted", "cryo_ranged__phase_tuned", "cryo_ranged__regen_lattice", "cryo_ranged__siege_frame", "cryo_ranged__umbra_shroud", "cryo_skirmisher__assault_doctrine", "cryo_skirmisher__biocrafted", "cryo_skirmisher__phase_tuned", "cryo_skirmisher__regen_lattice", "cryo_skirmisher__siege_frame", "cryo_skirmisher__umbra_shroud", "thermal_bruiser__assault_doctrine", "thermal_bruiser__biocrafted", "thermal_bruiser__phase_tuned", "thermal_bruiser__regen_lattice", "thermal_bruiser__siege_frame", "thermal_bruiser__umbra_shroud", "thermal_ranged__assault_doctrine", "thermal_ranged__biocrafted", "thermal_ranged__phase_tuned", "thermal_ranged__regen_lattice", "thermal_ranged__siege_frame", "thermal_ranged__umbra_shroud", "thermal_skirmisher__assault_doctrine", "thermal_skirmisher__biocrafted", "thermal_skirmisher__phase_tuned", "thermal_skirmisher__regen_lattice", "thermal_skirmisher__siege_frame", "thermal_skirmisher__umbra_shroud", "void_bruiser__assault_doctrine", "void_bruiser__biocrafted", "void_bruiser__phase_tuned", "void_bruiser__regen_lattice", "void_bruiser__siege_frame", "void_bruiser__umbra_shroud", "void_ranged__assault_doctrine", "void_ranged__biocrafted", "void_ranged__phase_tuned", "void_ranged__regen_lattice", "void_ranged__siege_frame", "void_ranged__umbra_shroud", "void_skirmisher__assault_doctrine", "void_skirmisher__biocrafted", "void_skirmisher__phase_tuned", "void_skirmisher__regen_lattice", "void_skirmisher__siege_frame", "void_skirmisher__umbra_shroud", "volt_bruiser__assault_doctrine", "volt_bruiser__biocrafted", "volt_bruiser__phase_tuned", "volt_bruiser__regen_lattice", "volt_bruiser__siege_frame", "volt_bruiser__umbra_shroud", "volt_ranged__assault_doctrine", "volt_ranged__biocrafted", "volt_ranged__phase_tuned", "volt_ranged__regen_lattice", "volt_ranged__siege_frame", "volt_ranged__umbra_shroud", "volt_skirmisher__assault_doctrine", "volt_skirmisher__biocrafted", "volt_skirmisher__phase_tuned", "volt_skirmisher__regen_lattice", "volt_skirmisher__siege_frame", "volt_skirmisher__umbra_shroud")
+wave_count = 4
+reward_credits = 465
+champion_chance = 0.2
+boss_enemy_id = "corrosive_bruiser__assault_doctrine"
+id = "biotech_lab__veteran"
+display_name = "Biotech Lab Veteran Sweep"
+summary = "Wave encounter for Biotech Lab on Veteran."

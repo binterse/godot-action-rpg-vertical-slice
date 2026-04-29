@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_kp7hf"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_uqujv"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_wukep"]
+
+[sub_resource type="Resource" id="Resource_dgefa"]
+script = ExtResource("1_kp7hf")
+role = "ranged"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 72.0
+base_shield = 28.0
+base_speed = 132.0
+base_damage = 14.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("corrosive_ranged_attack")
+palette_color = Color(0.5568628, 0.9607843, 0.54509807, 1)
+id = "corrosive_ranged"
+display_name = "Corrosive Ranged"
+summary = "Corrosive family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_ntgt3"]
+script = ExtResource("2_uqujv")
+prefix = "Bogslick"
+bonus_health = 1.08
+bonus_speed = 0.98
+aggression_bonus = 0.98
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("toxic_marsh")
+palette_shift = Color(0.6117647, 0.93333334, 0.38431373, 1)
+id = "bogslick"
+display_name = "Bogslick"
+summary = "Bogslick modifier package."
+
+[resource]
+script = ExtResource("3_wukep")
+family = SubResource("Resource_dgefa")
+mutation = SubResource("Resource_ntgt3")
+role = "ranged"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 73.872
+base_shield = 27.608
+base_speed = 129.35999999999999
+base_damage = 13.299999999999999
+aggression = 1.0584
+attack_ids = PackedStringArray("corrosive_ranged_attack")
+habitat_tags = PackedStringArray("toxic_marsh")
+palette_primary = Color(0.57498044, 0.9517255, 0.49203923, 1)
+palette_secondary = Color(0.7049412, 0.9493333, 0.53207844, 1)
+loot_ids = PackedStringArray("scrap_bundle", "corrosive_resin")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "corrosive_ranged__bogslick"
+display_name = "Bogslick Corrosive Ranged"
+summary = "Corrosive Ranged adapted for Bogslick conditions."

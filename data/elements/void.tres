@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ElementResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/element_resource.gd" id="1_4tsgw"]
+
+[resource]
+script = ExtResource("1_4tsgw")
+color = Color(0.7019608, 0.5529412, 1, 1)
+status_id = "shock"
+strong_against_id = "thermal"
+weak_against_id = "volt"
+id = "void"
+display_name = "Void"
+summary = "Exotic anomaly energy with volatile overload effects."

@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_8fxhx"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_fjnjp"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_602ts"]
+
+[sub_resource type="Resource" id="Resource_hv1jd"]
+script = ExtResource("1_8fxhx")
+role = "bruiser"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 118.0
+base_shield = 36.0
+base_speed = 102.0
+base_damage = 20.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("thermal_bruiser_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_bruiser"
+display_name = "Thermal Bruiser"
+summary = "Thermal family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_lieeh"]
+script = ExtResource("2_fjnjp")
+prefix = "Frostbitten"
+bonus_health = 1.06
+bonus_damage = 0.98
+bonus_speed = 0.94
+aggression_bonus = 0.96
+ailment_bonus = 1.14
+habitat_tags = PackedStringArray("cryo_tundra")
+palette_shift = Color(0.56078434, 0.9098039, 1, 1)
+id = "frostbitten"
+display_name = "Frostbitten"
+summary = "Frostbitten modifier package."
+
+[resource]
+script = ExtResource("3_602ts")
+family = SubResource("Resource_hv1jd")
+mutation = SubResource("Resource_lieeh")
+role = "bruiser"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 121.3276
+base_shield = 35.352
+base_speed = 95.88
+base_damage = 19.012
+aggression = 0.9216
+attack_ids = PackedStringArray("thermal_bruiser_attack")
+habitat_tags = PackedStringArray("cryo_tundra")
+palette_primary = Color(0.8550588, 0.66282356, 0.59011763, 1)
+palette_secondary = Color(0.6661961, 0.93145096, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "thermal_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "thermal_bruiser__frostbitten"
+display_name = "Frostbitten Thermal Bruiser"
+summary = "Thermal Bruiser adapted for Frostbitten conditions."

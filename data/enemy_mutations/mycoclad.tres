@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyMutationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="1_u315t"]
+
+[resource]
+script = ExtResource("1_u315t")
+prefix = "Mycoclad"
+bonus_health = 1.02
+bonus_damage = 1.04
+bonus_speed = 1.02
+aggression_bonus = 1.06
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("fungal_jungle")
+palette_shift = Color(0.4745098, 0.9647059, 0.65882355, 1)
+id = "mycoclad"
+display_name = "Mycoclad"
+summary = "Mycoclad modifier package."

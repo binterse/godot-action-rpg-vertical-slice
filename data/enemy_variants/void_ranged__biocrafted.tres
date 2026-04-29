@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_oyxdf"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_ueqcl"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_tj2uy"]
+
+[sub_resource type="Resource" id="Resource_lfvxk"]
+script = ExtResource("1_oyxdf")
+role = "ranged"
+element_id = "void"
+ailment_id = "shock"
+base_health = 64.0
+base_shield = 38.0
+base_speed = 132.0
+base_damage = 14.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("void_ranged_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_ranged"
+display_name = "Void Ranged"
+summary = "Void family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_4w7i7"]
+script = ExtResource("2_ueqcl")
+prefix = "Biocrafted"
+bonus_health = 1.04
+bonus_damage = 1.02
+aggression_bonus = 1.06
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("biotech_lab")
+palette_shift = Color(0.4862745, 0.9411765, 0.8156863, 1)
+id = "biocrafted"
+display_name = "Biocrafted"
+summary = "Biocrafted modifier package."
+
+[resource]
+script = ExtResource("3_tj2uy")
+family = SubResource("Resource_lfvxk")
+mutation = SubResource("Resource_4w7i7")
+role = "ranged"
+element_id = "void"
+ailment_id = "shock"
+base_health = 65.8944
+base_shield = 37.164
+base_speed = 132.0
+base_damage = 14.137200000000002
+aggression = 1.1448
+attack_ids = PackedStringArray("void_ranged_attack")
+habitat_tags = PackedStringArray("biotech_lab")
+palette_primary = Color(0.63078433, 0.6810589, 0.93917644, 1)
+palette_secondary = Color(0.60956866, 0.95529413, 0.8599216, 1)
+loot_ids = PackedStringArray("scrap_bundle", "void_shard")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "void_ranged__biocrafted"
+display_name = "Biocrafted Void Ranged"
+summary = "Void Ranged adapted for Biocrafted conditions."

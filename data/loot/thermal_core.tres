@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LootEntryResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/loot_entry_resource.gd" id="1_lredh"]
+
+[resource]
+script = ExtResource("1_lredh")
+currency_id = "thermal_parts"
+rarity = "special"
+display_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_core"
+display_name = "Thermal Core"
+summary = "Thermal Core used for prototype reward readouts."

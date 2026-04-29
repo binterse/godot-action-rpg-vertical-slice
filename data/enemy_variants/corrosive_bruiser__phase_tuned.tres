@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_lmw08"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_wi8wp"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_tq0qv"]
+
+[sub_resource type="Resource" id="Resource_2if5g"]
+script = ExtResource("1_lmw08")
+role = "bruiser"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 126.0
+base_shield = 36.0
+base_speed = 102.0
+base_damage = 18.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("corrosive_bruiser_attack")
+palette_color = Color(0.5568628, 0.9607843, 0.54509807, 1)
+id = "corrosive_bruiser"
+display_name = "Corrosive Bruiser"
+summary = "Corrosive family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_30t1i"]
+script = ExtResource("2_wi8wp")
+category = "advanced"
+prefix = "Phase"
+bonus_health = 0.96
+bonus_damage = 1.08
+bonus_speed = 1.16
+aggression_bonus = 1.12
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_shift = Color(0.56078434, 0.7137255, 1, 1)
+id = "phase_tuned"
+display_name = "Phase Tuned"
+summary = "Phase Tuned modifier package."
+
+[resource]
+script = ExtResource("3_tq0qv")
+family = SubResource("Resource_2if5g")
+mutation = SubResource("Resource_30t1i")
+role = "bruiser"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 120.96
+base_shield = 34.632
+base_speed = 118.32
+base_damage = 19.44
+aggression = 1.0752000000000002
+attack_ids = PackedStringArray("corrosive_bruiser_attack")
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_primary = Color(0.5581569, 0.87925494, 0.6952157, 1)
+palette_secondary = Color(0.6661961, 0.78243136, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "corrosive_resin")
+difficulty_bias = {
+"cataclysm": 1.12,
+"mythic": 1.06
+}
+id = "corrosive_bruiser__phase_tuned"
+display_name = "Phase Corrosive Bruiser"
+summary = "Corrosive Bruiser adapted for Phase Tuned conditions."

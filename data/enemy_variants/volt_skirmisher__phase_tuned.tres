@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_bg1xd"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_55b7y"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_ki2oy"]
+
+[sub_resource type="Resource" id="Resource_fbq4n"]
+script = ExtResource("1_bg1xd")
+role = "skirmisher"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 72.0
+base_shield = 18.0
+base_speed = 184.0
+base_damage = 12.0
+aggression = 1.3
+default_attack_ids = PackedStringArray("volt_skirmisher_attack")
+palette_color = Color(1, 0.90588236, 0.45490196, 1)
+id = "volt_skirmisher"
+display_name = "Volt Skirmisher"
+summary = "Volt family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_30t1i"]
+script = ExtResource("2_55b7y")
+category = "advanced"
+prefix = "Phase"
+bonus_health = 0.96
+bonus_damage = 1.08
+bonus_speed = 1.16
+aggression_bonus = 1.12
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_shift = Color(0.56078434, 0.7137255, 1, 1)
+id = "phase_tuned"
+display_name = "Phase Tuned"
+summary = "Phase Tuned modifier package."
+
+[resource]
+script = ExtResource("3_ki2oy")
+family = SubResource("Resource_fbq4n")
+mutation = SubResource("Resource_30t1i")
+role = "skirmisher"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 69.8112
+base_shield = 17.316
+base_speed = 213.44
+base_damage = 13.0896
+aggression = 1.4560000000000002
+attack_ids = PackedStringArray("volt_skirmisher_attack")
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_primary = Color(0.8550588, 0.8424706, 0.63478434, 1)
+palette_secondary = Color(0.6661961, 0.78243136, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "volt_cell")
+difficulty_bias = {
+"cataclysm": 1.12,
+"mythic": 1.06
+}
+id = "volt_skirmisher__phase_tuned"
+display_name = "Phase Volt Skirmisher"
+summary = "Volt Skirmisher adapted for Phase Tuned conditions."

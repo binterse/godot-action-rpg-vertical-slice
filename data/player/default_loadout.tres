@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="PlayerLoadoutResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/player_loadout_resource.gd" id="1_y4310"]
+
+[resource]
+script = ExtResource("1_y4310")
+max_health = 190.0
+max_shield = 90.0
+move_speed = 270.0
+dodge_speed = 640.0
+dodge_duration = 0.22
+light_attack_id = "player_light_attack"
+heavy_attack_id = "player_heavy_attack"
+tech_attack_id = "player_tech_attack"
+status_resistance = 0.18
+shield_regen_delay = 2.8
+id = "default_loadout"
+display_name = "Field Vanguard"
+summary = "Balanced prototype loadout for the combat slice."

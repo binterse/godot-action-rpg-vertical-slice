@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HabitatResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="1_uptak"]
+
+[resource]
+script = ExtResource("1_uptak")
+palette_primary = Color(0.14901961, 0.12156863, 0.29803923, 1)
+palette_secondary = Color(0.6117647, 0.7764706, 1, 1)
+ambient_color = Color(0.03529412, 0.03137255, 0.09411765, 1)
+hazard_element_id = "volt"
+hazard_ailment_id = "shock"
+hazard_damage = 7.0
+hazard_interval = 3.5
+spawn_bias_role = "ranged"
+enemy_weight_bias = {
+"ranged": 1.1,
+"volt": 0.9
+}
+id = "crystal_cavern"
+display_name = "Crystal Cavern"
+summary = "Resonant mineral shafts amplify energy discharge and ricochet fire."

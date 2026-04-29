@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StatusAilmentResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/status_ailment_resource.gd" id="1_0ivbp"]
+
+[resource]
+script = ExtResource("1_0ivbp")
+color = Color(0.5176471, 0.84705883, 1, 1)
+effect_kind = "slow"
+base_duration = 2.8
+tick_interval = 0.8
+id = "freeze"
+display_name = "Freeze"
+summary = "Locks movement and slows attack tempo."

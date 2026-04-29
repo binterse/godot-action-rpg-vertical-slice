@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AttackResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/attack_resource.gd" id="1_obp7f"]
+
+[resource]
+script = ExtResource("1_obp7f")
+style = "ranged"
+element_id = "cryo"
+base_damage = 14.0
+attack_range = 300.0
+cooldown = 1.2
+projectile_speed = 420.0
+ailment_buildup = 18.0
+radius = 8.0
+id = "cryo_ranged_attack"
+display_name = "Cryo Ranged"
+summary = "Cryo package for ranged enemies."

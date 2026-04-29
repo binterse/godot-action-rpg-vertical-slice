@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_jkg7n"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_1fs4o"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_gd841"]
+
+[sub_resource type="Resource" id="Resource_dgefa"]
+script = ExtResource("1_jkg7n")
+role = "ranged"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 72.0
+base_shield = 28.0
+base_speed = 132.0
+base_damage = 14.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("corrosive_ranged_attack")
+palette_color = Color(0.5568628, 0.9607843, 0.54509807, 1)
+id = "corrosive_ranged"
+display_name = "Corrosive Ranged"
+summary = "Corrosive family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_reyig"]
+script = ExtResource("2_1fs4o")
+prefix = "Drowned"
+bonus_health = 1.04
+bonus_speed = 0.96
+ailment_bonus = 1.1
+habitat_tags = PackedStringArray("flooded_dome")
+palette_shift = Color(0.38039216, 0.7764706, 1, 1)
+id = "drowned"
+display_name = "Drowned"
+summary = "Drowned modifier package."
+
+[resource]
+script = ExtResource("3_gd841")
+family = SubResource("Resource_dgefa")
+mutation = SubResource("Resource_reyig")
+role = "ranged"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 73.38239999999999
+base_shield = 27.384
+base_speed = 126.72
+base_damage = 13.719999999999999
+aggression = 1.08
+attack_ids = PackedStringArray("corrosive_ranged_attack")
+habitat_tags = PackedStringArray("flooded_dome")
+palette_primary = Color(0.49862748, 0.89996076, 0.6952157, 1)
+palette_secondary = Color(0.52909803, 0.83011764, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "corrosive_resin")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "corrosive_ranged__drowned"
+display_name = "Drowned Corrosive Ranged"
+summary = "Corrosive Ranged adapted for Drowned conditions."

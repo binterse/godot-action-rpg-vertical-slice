@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="EncounterTemplateResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/difficulty_resource.gd" id="1_pihf2"]
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="2_sxjmx"]
+[ext_resource type="Script" path="res://scripts/resources/encounter_template_resource.gd" id="3_o71fs"]
+
+[sub_resource type="Resource" id="Resource_apb2m"]
+script = ExtResource("1_pihf2")
+enemy_health_mult = 1.54
+enemy_damage_mult = 1.38
+enemy_speed_mult = 1.16
+aggression_mult = 1.26
+spawn_pressure_mult = 1.42
+ailment_potency_mult = 1.28
+player_recovery_mult = 0.82
+id = "mythic"
+display_name = "Mythic"
+summary = "Mythic tuning for enemy pressure, aggression, and ailment strength."
+
+[sub_resource type="Resource" id="Resource_kkhsf"]
+script = ExtResource("2_sxjmx")
+palette_primary = Color(0.15686275, 0.09803922, 0.2901961, 1)
+palette_secondary = Color(0.7019608, 0.5529412, 1, 1)
+ambient_color = Color(0.03529412, 0.015686275, 0.06666667, 1)
+hazard_element_id = "void"
+hazard_ailment_id = "shock"
+hazard_damage = 9.2
+hazard_interval = 2.7
+spawn_bias_role = "bruiser"
+enemy_weight_bias = {
+"bruiser": 1.0,
+"void": 1.1
+}
+id = "alien_relic_vault"
+display_name = "Alien Relic Vault"
+summary = "Ancient geometry bends sightlines and releases void-charged pulses."
+
+[resource]
+script = ExtResource("3_o71fs")
+habitat = SubResource("Resource_kkhsf")
+difficulty = SubResource("Resource_apb2m")
+allowed_enemy_ids = PackedStringArray("corrosive_bruiser__assault_doctrine", "corrosive_bruiser__phase_tuned", "corrosive_bruiser__regen_lattice", "corrosive_bruiser__relicbound", "corrosive_bruiser__siege_frame", "corrosive_bruiser__umbra_shroud", "corrosive_ranged__assault_doctrine", "corrosive_ranged__phase_tuned", "corrosive_ranged__regen_lattice", "corrosive_ranged__relicbound", "corrosive_ranged__siege_frame", "corrosive_ranged__umbra_shroud", "corrosive_skirmisher__assault_doctrine", "corrosive_skirmisher__phase_tuned", "corrosive_skirmisher__regen_lattice", "corrosive_skirmisher__relicbound", "corrosive_skirmisher__siege_frame", "corrosive_skirmisher__umbra_shroud", "cryo_bruiser__assault_doctrine", "cryo_bruiser__phase_tuned", "cryo_bruiser__regen_lattice", "cryo_bruiser__relicbound", "cryo_bruiser__siege_frame", "cryo_bruiser__umbra_shroud", "cryo_ranged__assault_doctrine", "cryo_ranged__phase_tuned", "cryo_ranged__regen_lattice", "cryo_ranged__relicbound", "cryo_ranged__siege_frame", "cryo_ranged__umbra_shroud", "cryo_skirmisher__assault_doctrine", "cryo_skirmisher__phase_tuned", "cryo_skirmisher__regen_lattice", "cryo_skirmisher__relicbound", "cryo_skirmisher__siege_frame", "cryo_skirmisher__umbra_shroud", "thermal_bruiser__assault_doctrine", "thermal_bruiser__phase_tuned", "thermal_bruiser__regen_lattice", "thermal_bruiser__relicbound", "thermal_bruiser__siege_frame", "thermal_bruiser__umbra_shroud", "thermal_ranged__assault_doctrine", "thermal_ranged__phase_tuned", "thermal_ranged__regen_lattice", "thermal_ranged__relicbound", "thermal_ranged__siege_frame", "thermal_ranged__umbra_shroud", "thermal_skirmisher__assault_doctrine", "thermal_skirmisher__phase_tuned", "thermal_skirmisher__regen_lattice", "thermal_skirmisher__relicbound", "thermal_skirmisher__siege_frame", "thermal_skirmisher__umbra_shroud", "void_bruiser__assault_doctrine", "void_bruiser__phase_tuned", "void_bruiser__regen_lattice", "void_bruiser__relicbound", "void_bruiser__siege_frame", "void_bruiser__umbra_shroud", "void_ranged__assault_doctrine", "void_ranged__phase_tuned", "void_ranged__regen_lattice", "void_ranged__relicbound", "void_ranged__siege_frame", "void_ranged__umbra_shroud", "void_skirmisher__assault_doctrine", "void_skirmisher__phase_tuned", "void_skirmisher__regen_lattice", "void_skirmisher__relicbound", "void_skirmisher__siege_frame", "void_skirmisher__umbra_shroud", "volt_bruiser__assault_doctrine", "volt_bruiser__phase_tuned", "volt_bruiser__regen_lattice", "volt_bruiser__relicbound", "volt_bruiser__siege_frame", "volt_bruiser__umbra_shroud", "volt_ranged__assault_doctrine", "volt_ranged__phase_tuned", "volt_ranged__regen_lattice", "volt_ranged__relicbound", "volt_ranged__siege_frame", "volt_ranged__umbra_shroud", "volt_skirmisher__assault_doctrine", "volt_skirmisher__phase_tuned", "volt_skirmisher__regen_lattice", "volt_skirmisher__relicbound", "volt_skirmisher__siege_frame", "volt_skirmisher__umbra_shroud")
+wave_count = 5
+base_wave_size = 4
+reward_credits = 565
+champion_chance = 0.25
+boss_enemy_id = "void_bruiser__assault_doctrine"
+id = "alien_relic_vault__mythic"
+display_name = "Alien Relic Vault Mythic Sweep"
+summary = "Wave encounter for Alien Relic Vault on Mythic."

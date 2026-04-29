@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_23f6w"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_jlnt5"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_60ncm"]
+
+[sub_resource type="Resource" id="Resource_70v3p"]
+script = ExtResource("1_23f6w")
+role = "ranged"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 64.0
+base_shield = 28.0
+base_speed = 132.0
+base_damage = 16.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("thermal_ranged_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_ranged"
+display_name = "Thermal Ranged"
+summary = "Thermal family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_5yf2r"]
+script = ExtResource("2_jlnt5")
+prefix = "Wreckborn"
+bonus_damage = 1.02
+bonus_speed = 0.98
+aggression_bonus = 1.04
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("orbital_wreckage")
+palette_shift = Color(0.54509807, 0.827451, 1, 1)
+id = "wreckborn"
+display_name = "Wreckborn"
+summary = "Wreckborn modifier package."
+
+[resource]
+script = ExtResource("3_60ncm")
+family = SubResource("Resource_70v3p")
+mutation = SubResource("Resource_5yf2r")
+role = "ranged"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 66.56
+base_shield = 27.16
+base_speed = 129.35999999999999
+base_damage = 16.9728
+aggression = 1.1232000000000002
+attack_ids = PackedStringArray("thermal_ranged_attack")
+habitat_tags = PackedStringArray("orbital_wreckage")
+palette_primary = Color(0.84988236, 0.63564706, 0.59011763, 1)
+palette_secondary = Color(0.6542745, 0.86886275, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "thermal_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "thermal_ranged__wreckborn"
+display_name = "Wreckborn Thermal Ranged"
+summary = "Thermal Ranged adapted for Wreckborn conditions."

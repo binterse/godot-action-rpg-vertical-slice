@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_034ls"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_3ewb4"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_bsj4u"]
+
+[sub_resource type="Resource" id="Resource_0mkmg"]
+script = ExtResource("1_034ls")
+role = "skirmisher"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 72.0
+base_shield = 24.0
+base_speed = 166.0
+base_damage = 12.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("cryo_skirmisher_attack")
+palette_color = Color(0.53333336, 0.88235295, 1, 1)
+id = "cryo_skirmisher"
+display_name = "Cryo Skirmisher"
+summary = "Cryo family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_5yf2r"]
+script = ExtResource("2_3ewb4")
+prefix = "Wreckborn"
+bonus_damage = 1.02
+bonus_speed = 0.98
+aggression_bonus = 1.04
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("orbital_wreckage")
+palette_shift = Color(0.54509807, 0.827451, 1, 1)
+id = "wreckborn"
+display_name = "Wreckborn"
+summary = "Wreckborn modifier package."
+
+[resource]
+script = ExtResource("3_bsj4u")
+family = SubResource("Resource_0mkmg")
+mutation = SubResource("Resource_5yf2r")
+role = "skirmisher"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 70.56
+base_shield = 23.28
+base_speed = 162.68
+base_damage = 11.9952
+aggression = 1.2688
+attack_ids = PackedStringArray("cryo_skirmisher_attack")
+habitat_tags = PackedStringArray("orbital_wreckage")
+palette_primary = Color(0.5372157, 0.8642353, 1, 1)
+palette_secondary = Color(0.6542745, 0.86886275, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "cryo_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "cryo_skirmisher__wreckborn"
+display_name = "Wreckborn Cryo Skirmisher"
+summary = "Cryo Skirmisher adapted for Wreckborn conditions."

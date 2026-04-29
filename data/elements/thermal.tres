@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ElementResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/element_resource.gd" id="1_p7iyo"]
+
+[resource]
+script = ExtResource("1_p7iyo")
+color = Color(1, 0.5411765, 0.3882353, 1)
+status_id = "burn"
+strong_against_id = "cryo"
+weak_against_id = "void"
+id = "thermal"
+display_name = "Thermal"
+summary = "Aggressive heat damage with reliable burn pressure."

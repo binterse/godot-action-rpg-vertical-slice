@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_votky"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_4t47w"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_in62w"]
+
+[sub_resource type="Resource" id="Resource_sdlli"]
+script = ExtResource("1_votky")
+role = "skirmisher"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 72.0
+base_shield = 18.0
+base_speed = 166.0
+base_damage = 14.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("thermal_skirmisher_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_skirmisher"
+display_name = "Thermal Skirmisher"
+summary = "Thermal family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_t2p5m"]
+script = ExtResource("2_4t47w")
+prefix = "Mycoclad"
+bonus_health = 1.02
+bonus_damage = 1.04
+bonus_speed = 1.02
+aggression_bonus = 1.06
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("fungal_jungle")
+palette_shift = Color(0.4745098, 0.9647059, 0.65882355, 1)
+id = "mycoclad"
+display_name = "Mycoclad"
+summary = "Mycoclad modifier package."
+
+[resource]
+script = ExtResource("3_in62w")
+family = SubResource("Resource_sdlli")
+mutation = SubResource("Resource_t2p5m")
+role = "skirmisher"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 74.17439999999999
+base_shield = 17.532
+base_speed = 169.32
+base_damage = 14.7056
+aggression = 1.2932000000000001
+attack_ids = PackedStringArray("thermal_skirmisher_attack")
+habitat_tags = PackedStringArray("fungal_jungle")
+palette_primary = Color(0.8265883, 0.6809412, 0.47752944, 1)
+palette_secondary = Color(0.6006274, 0.9731765, 0.7407059, 1)
+loot_ids = PackedStringArray("scrap_bundle", "thermal_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "thermal_skirmisher__mycoclad"
+display_name = "Mycoclad Thermal Skirmisher"
+summary = "Thermal Skirmisher adapted for Mycoclad conditions."

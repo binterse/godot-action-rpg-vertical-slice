@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LootEntryResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/loot_entry_resource.gd" id="1_8uelk"]
+
+[resource]
+script = ExtResource("1_8uelk")
+amount = 24
+display_color = Color(0.8156863, 0.8666667, 0.9098039, 1)
+id = "scrap_bundle"
+display_name = "Scrap Bundle"
+summary = "Scrap Bundle used for prototype reward readouts."

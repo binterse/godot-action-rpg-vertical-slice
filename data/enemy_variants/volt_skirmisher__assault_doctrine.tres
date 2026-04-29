@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_3lmam"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_i5sdv"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_h80p5"]
+
+[sub_resource type="Resource" id="Resource_fbq4n"]
+script = ExtResource("1_3lmam")
+role = "skirmisher"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 72.0
+base_shield = 18.0
+base_speed = 184.0
+base_damage = 12.0
+aggression = 1.3
+default_attack_ids = PackedStringArray("volt_skirmisher_attack")
+palette_color = Color(1, 0.90588236, 0.45490196, 1)
+id = "volt_skirmisher"
+display_name = "Volt Skirmisher"
+summary = "Volt family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_hnmv5"]
+script = ExtResource("2_i5sdv")
+category = "advanced"
+prefix = "Assault"
+bonus_health = 1.08
+bonus_damage = 1.12
+bonus_speed = 1.08
+aggression_bonus = 1.16
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_shift = Color(1, 0.73333335, 0.4862745, 1)
+id = "assault_doctrine"
+display_name = "Assault Doctrine"
+summary = "Assault Doctrine modifier package."
+
+[resource]
+script = ExtResource("3_h80p5")
+family = SubResource("Resource_fbq4n")
+mutation = SubResource("Resource_hnmv5")
+role = "skirmisher"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 79.3152
+base_shield = 17.748
+base_speed = 198.72000000000003
+base_damage = 13.708800000000002
+aggression = 1.508
+attack_ids = PackedStringArray("volt_skirmisher_attack")
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_primary = Color(1, 0.8489412, 0.4652549, 1)
+palette_secondary = Color(1, 0.79733336, 0.60956866, 1)
+loot_ids = PackedStringArray("scrap_bundle", "volt_cell")
+difficulty_bias = {
+"cataclysm": 1.12,
+"mythic": 1.06
+}
+id = "volt_skirmisher__assault_doctrine"
+display_name = "Assault Volt Skirmisher"
+summary = "Volt Skirmisher adapted for Assault Doctrine conditions."

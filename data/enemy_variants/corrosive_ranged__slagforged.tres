@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_k6fnx"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_ci4kr"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_ym6li"]
+
+[sub_resource type="Resource" id="Resource_dgefa"]
+script = ExtResource("1_k6fnx")
+role = "ranged"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 72.0
+base_shield = 28.0
+base_speed = 132.0
+base_damage = 14.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("corrosive_ranged_attack")
+palette_color = Color(0.5568628, 0.9607843, 0.54509807, 1)
+id = "corrosive_ranged"
+display_name = "Corrosive Ranged"
+summary = "Corrosive family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_1iuto"]
+script = ExtResource("2_ci4kr")
+prefix = "Slagforged"
+bonus_health = 1.1
+bonus_damage = 1.08
+bonus_speed = 0.94
+aggression_bonus = 1.02
+ailment_bonus = 1.06
+habitat_tags = PackedStringArray("magma_foundry")
+palette_shift = Color(1, 0.5411765, 0.3882353, 1)
+id = "slagforged"
+display_name = "Slagforged"
+summary = "Slagforged modifier package."
+
+[resource]
+script = ExtResource("3_ym6li")
+family = SubResource("Resource_dgefa")
+mutation = SubResource("Resource_1iuto")
+role = "ranged"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 80.784
+base_shield = 27.72
+base_speed = 124.08
+base_damage = 15.422400000000001
+aggression = 1.1016000000000001
+attack_ids = PackedStringArray("corrosive_ranged_attack")
+habitat_tags = PackedStringArray("magma_foundry")
+palette_primary = Color(0.70309806, 0.8223137, 0.49333334, 1)
+palette_secondary = Color(1, 0.6512941, 0.5350588, 1)
+loot_ids = PackedStringArray("scrap_bundle", "corrosive_resin")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "corrosive_ranged__slagforged"
+display_name = "Slagforged Corrosive Ranged"
+summary = "Corrosive Ranged adapted for Slagforged conditions."

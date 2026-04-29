@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyFamilyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_0pe1p"]
+
+[resource]
+script = ExtResource("1_0pe1p")
+role = "bruiser"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 118.0
+base_shield = 36.0
+base_damage = 18.0
+aggression = 1.04
+default_attack_ids = PackedStringArray("volt_bruiser_attack")
+palette_color = Color(1, 0.90588236, 0.45490196, 1)
+id = "volt_bruiser"
+display_name = "Volt Bruiser"
+summary = "Volt family tuned for bruiser behavior."

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DifficultyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/difficulty_resource.gd" id="1_qetwj"]
+
+[resource]
+script = ExtResource("1_qetwj")
+enemy_health_mult = 1.78
+enemy_damage_mult = 1.55
+enemy_speed_mult = 1.22
+aggression_mult = 1.36
+spawn_pressure_mult = 1.58
+ailment_potency_mult = 1.38
+player_recovery_mult = 0.78
+id = "cataclysm"
+display_name = "Cataclysm"
+summary = "Cataclysm tuning for enemy pressure, aggression, and ailment strength."

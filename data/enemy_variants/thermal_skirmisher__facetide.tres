@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_2x06q"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_8mwa3"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_bbq6b"]
+
+[sub_resource type="Resource" id="Resource_sdlli"]
+script = ExtResource("1_2x06q")
+role = "skirmisher"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 72.0
+base_shield = 18.0
+base_speed = 166.0
+base_damage = 14.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("thermal_skirmisher_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_skirmisher"
+display_name = "Thermal Skirmisher"
+summary = "Thermal family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_718h5"]
+script = ExtResource("2_8mwa3")
+prefix = "Facetide"
+bonus_health = 0.98
+bonus_damage = 1.08
+bonus_speed = 1.03
+aggression_bonus = 1.02
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("crystal_cavern")
+palette_shift = Color(0.6117647, 0.7764706, 1, 1)
+id = "facetide"
+display_name = "Facetide"
+summary = "Facetide modifier package."
+
+[resource]
+script = ExtResource("3_bbq6b")
+family = SubResource("Resource_sdlli")
+mutation = SubResource("Resource_718h5")
+role = "skirmisher"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 71.97120000000001
+base_shield = 17.387999999999998
+base_speed = 170.98000000000002
+base_damage = 15.422400000000001
+aggression = 1.2444
+attack_ids = PackedStringArray("thermal_skirmisher_attack")
+habitat_tags = PackedStringArray("crystal_cavern")
+palette_primary = Color(0.8718823, 0.6188235, 0.59011763, 1)
+palette_secondary = Color(0.7049412, 0.83011764, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "thermal_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "thermal_skirmisher__facetide"
+display_name = "Facetide Thermal Skirmisher"
+summary = "Thermal Skirmisher adapted for Facetide conditions."

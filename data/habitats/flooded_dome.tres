@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HabitatResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="1_8iws3"]
+
+[resource]
+script = ExtResource("1_8iws3")
+palette_primary = Color(0.07450981, 0.22352941, 0.35686275, 1)
+palette_secondary = Color(0.38039216, 0.7764706, 1, 1)
+ambient_color = Color(0.019607844, 0.0627451, 0.09411765, 1)
+hazard_element_id = "volt"
+hazard_ailment_id = "shock"
+hazard_damage = 7.8
+hazard_interval = 3.1
+spawn_bias_role = "ranged"
+enemy_weight_bias = {
+"ranged": 0.9,
+"volt": 1.0
+}
+id = "flooded_dome"
+display_name = "Flooded Dome"
+summary = "Broken sea labs with rising water and unstable conduits."

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyFamilyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_rsxfx"]
+
+[resource]
+script = ExtResource("1_rsxfx")
+role = "ranged"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 64.0
+base_shield = 34.0
+base_speed = 132.0
+base_damage = 14.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("cryo_ranged_attack")
+palette_color = Color(0.53333336, 0.88235295, 1, 1)
+id = "cryo_ranged"
+display_name = "Cryo Ranged"
+summary = "Cryo family tuned for ranged behavior."

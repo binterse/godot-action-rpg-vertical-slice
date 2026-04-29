@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_6dxst"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_kb1tv"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_lkep8"]
+
+[sub_resource type="Resource" id="Resource_hv1jd"]
+script = ExtResource("1_6dxst")
+role = "bruiser"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 118.0
+base_shield = 36.0
+base_speed = 102.0
+base_damage = 20.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("thermal_bruiser_attack")
+palette_color = Color(1, 0.5411765, 0.3882353, 1)
+id = "thermal_bruiser"
+display_name = "Thermal Bruiser"
+summary = "Thermal family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_5dvbh"]
+script = ExtResource("2_kb1tv")
+category = "advanced"
+prefix = "Umbra"
+bonus_damage = 1.14
+bonus_speed = 1.1
+aggression_bonus = 1.18
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_shift = Color(0.7647059, 0.6313726, 1, 1)
+id = "umbra_shroud"
+display_name = "Umbra Shroud"
+summary = "Umbra Shroud modifier package."
+
+[resource]
+script = ExtResource("3_lkep8")
+family = SubResource("Resource_hv1jd")
+mutation = SubResource("Resource_5dvbh")
+role = "bruiser"
+element_id = "thermal"
+ailment_id = "burn"
+base_health = 122.72
+base_shield = 34.92
+base_speed = 112.2
+base_damage = 23.711999999999996
+aggression = 1.1327999999999998
+attack_ids = PackedStringArray("thermal_bruiser_attack")
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_primary = Color(0.9223529, 0.5709412, 0.59011763, 1)
+palette_secondary = Color(0.82117647, 0.71984315, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "thermal_core")
+difficulty_bias = {
+"cataclysm": 1.12,
+"mythic": 1.06
+}
+id = "thermal_bruiser__umbra_shroud"
+display_name = "Umbra Thermal Bruiser"
+summary = "Thermal Bruiser adapted for Umbra Shroud conditions."

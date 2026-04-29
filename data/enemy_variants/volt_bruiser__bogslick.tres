@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_ghjov"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_ywctq"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_bvo2w"]
+
+[sub_resource type="Resource" id="Resource_fm45i"]
+script = ExtResource("1_ghjov")
+role = "bruiser"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 118.0
+base_shield = 36.0
+base_damage = 18.0
+aggression = 1.04
+default_attack_ids = PackedStringArray("volt_bruiser_attack")
+palette_color = Color(1, 0.90588236, 0.45490196, 1)
+id = "volt_bruiser"
+display_name = "Volt Bruiser"
+summary = "Volt family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_ntgt3"]
+script = ExtResource("2_ywctq")
+prefix = "Bogslick"
+bonus_health = 1.08
+bonus_speed = 0.98
+aggression_bonus = 0.98
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("toxic_marsh")
+palette_shift = Color(0.6117647, 0.93333334, 0.38431373, 1)
+id = "bogslick"
+display_name = "Bogslick"
+summary = "Bogslick modifier package."
+
+[resource]
+script = ExtResource("3_bvo2w")
+family = SubResource("Resource_fm45i")
+mutation = SubResource("Resource_ntgt3")
+role = "bruiser"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 121.06800000000001
+base_shield = 35.496
+base_speed = 117.6
+base_damage = 17.099999999999998
+aggression = 1.0192
+attack_ids = PackedStringArray("volt_bruiser_attack")
+habitat_tags = PackedStringArray("toxic_marsh")
+palette_primary = Color(0.8718823, 0.9149412, 0.43160784, 1)
+palette_secondary = Color(0.7049412, 0.9493333, 0.53207844, 1)
+loot_ids = PackedStringArray("scrap_bundle", "volt_cell")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "volt_bruiser__bogslick"
+display_name = "Bogslick Volt Bruiser"
+summary = "Volt Bruiser adapted for Bogslick conditions."

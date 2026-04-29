@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyMutationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="1_he5ar"]
+
+[resource]
+script = ExtResource("1_he5ar")
+prefix = "Relicbound"
+bonus_health = 1.08
+bonus_damage = 1.08
+bonus_speed = 0.98
+aggression_bonus = 1.08
+ailment_bonus = 1.14
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_shift = Color(0.7019608, 0.5529412, 1, 1)
+id = "relicbound"
+display_name = "Relicbound"
+summary = "Relicbound modifier package."

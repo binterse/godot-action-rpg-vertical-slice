@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="EncounterTemplateResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/difficulty_resource.gd" id="1_xo7yq"]
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="2_y20dh"]
+[ext_resource type="Script" path="res://scripts/resources/encounter_template_resource.gd" id="3_47yhy"]
+
+[sub_resource type="Resource" id="Resource_apb2m"]
+script = ExtResource("1_xo7yq")
+enemy_health_mult = 1.54
+enemy_damage_mult = 1.38
+enemy_speed_mult = 1.16
+aggression_mult = 1.26
+spawn_pressure_mult = 1.42
+ailment_potency_mult = 1.28
+player_recovery_mult = 0.82
+id = "mythic"
+display_name = "Mythic"
+summary = "Mythic tuning for enemy pressure, aggression, and ailment strength."
+
+[sub_resource type="Resource" id="Resource_r7vya"]
+script = ExtResource("2_y20dh")
+palette_primary = Color(0.09019608, 0.20784314, 0.29411766, 1)
+palette_secondary = Color(0.56078434, 0.9098039, 1, 1)
+ambient_color = Color(0.02745098, 0.07450981, 0.11372549, 1)
+hazard_element_id = "cryo"
+hazard_ailment_id = "freeze"
+hazard_damage = 6.0
+hazard_interval = 3.6
+spawn_bias_role = "ranged"
+enemy_weight_bias = {
+"cryo": 1.1,
+"ranged": 0.8
+}
+id = "cryo_tundra"
+display_name = "Cryo Tundra"
+summary = "Glacial flats with whiteout gusts and brittle ice shelves."
+
+[resource]
+script = ExtResource("3_47yhy")
+habitat = SubResource("Resource_r7vya")
+difficulty = SubResource("Resource_apb2m")
+allowed_enemy_ids = PackedStringArray("corrosive_bruiser__assault_doctrine", "corrosive_bruiser__frostbitten", "corrosive_bruiser__phase_tuned", "corrosive_bruiser__regen_lattice", "corrosive_bruiser__siege_frame", "corrosive_bruiser__umbra_shroud", "corrosive_ranged__assault_doctrine", "corrosive_ranged__frostbitten", "corrosive_ranged__phase_tuned", "corrosive_ranged__regen_lattice", "corrosive_ranged__siege_frame", "corrosive_ranged__umbra_shroud", "corrosive_skirmisher__assault_doctrine", "corrosive_skirmisher__frostbitten", "corrosive_skirmisher__phase_tuned", "corrosive_skirmisher__regen_lattice", "corrosive_skirmisher__siege_frame", "corrosive_skirmisher__umbra_shroud", "cryo_bruiser__assault_doctrine", "cryo_bruiser__frostbitten", "cryo_bruiser__phase_tuned", "cryo_bruiser__regen_lattice", "cryo_bruiser__siege_frame", "cryo_bruiser__umbra_shroud", "cryo_ranged__assault_doctrine", "cryo_ranged__frostbitten", "cryo_ranged__phase_tuned", "cryo_ranged__regen_lattice", "cryo_ranged__siege_frame", "cryo_ranged__umbra_shroud", "cryo_skirmisher__assault_doctrine", "cryo_skirmisher__frostbitten", "cryo_skirmisher__phase_tuned", "cryo_skirmisher__regen_lattice", "cryo_skirmisher__siege_frame", "cryo_skirmisher__umbra_shroud", "thermal_bruiser__assault_doctrine", "thermal_bruiser__frostbitten", "thermal_bruiser__phase_tuned", "thermal_bruiser__regen_lattice", "thermal_bruiser__siege_frame", "thermal_bruiser__umbra_shroud", "thermal_ranged__assault_doctrine", "thermal_ranged__frostbitten", "thermal_ranged__phase_tuned", "thermal_ranged__regen_lattice", "thermal_ranged__siege_frame", "thermal_ranged__umbra_shroud", "thermal_skirmisher__assault_doctrine", "thermal_skirmisher__frostbitten", "thermal_skirmisher__phase_tuned", "thermal_skirmisher__regen_lattice", "thermal_skirmisher__siege_frame", "thermal_skirmisher__umbra_shroud", "void_bruiser__assault_doctrine", "void_bruiser__frostbitten", "void_bruiser__phase_tuned", "void_bruiser__regen_lattice", "void_bruiser__siege_frame", "void_bruiser__umbra_shroud", "void_ranged__assault_doctrine", "void_ranged__frostbitten", "void_ranged__phase_tuned", "void_ranged__regen_lattice", "void_ranged__siege_frame", "void_ranged__umbra_shroud", "void_skirmisher__assault_doctrine", "void_skirmisher__frostbitten", "void_skirmisher__phase_tuned", "void_skirmisher__regen_lattice", "void_skirmisher__siege_frame", "void_skirmisher__umbra_shroud", "volt_bruiser__assault_doctrine", "volt_bruiser__frostbitten", "volt_bruiser__phase_tuned", "volt_bruiser__regen_lattice", "volt_bruiser__siege_frame", "volt_bruiser__umbra_shroud", "volt_ranged__assault_doctrine", "volt_ranged__frostbitten", "volt_ranged__phase_tuned", "volt_ranged__regen_lattice", "volt_ranged__siege_frame", "volt_ranged__umbra_shroud", "volt_skirmisher__assault_doctrine", "volt_skirmisher__frostbitten", "volt_skirmisher__phase_tuned", "volt_skirmisher__regen_lattice", "volt_skirmisher__siege_frame", "volt_skirmisher__umbra_shroud")
+wave_count = 5
+base_wave_size = 4
+reward_credits = 430
+champion_chance = 0.25
+boss_enemy_id = "cryo_bruiser__assault_doctrine"
+id = "cryo_tundra__mythic"
+display_name = "Cryo Tundra Mythic Sweep"
+summary = "Wave encounter for Cryo Tundra on Mythic."

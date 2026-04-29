@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="EnemyFamilyResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_iofmu"]
+
+[resource]
+script = ExtResource("1_iofmu")
+role = "skirmisher"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 72.0
+base_shield = 24.0
+base_speed = 166.0
+base_damage = 12.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("cryo_skirmisher_attack")
+palette_color = Color(0.53333336, 0.88235295, 1, 1)
+id = "cryo_skirmisher"
+display_name = "Cryo Skirmisher"
+summary = "Cryo family tuned for skirmisher behavior."

@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_f524m"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_2u33i"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_sqeo8"]
+
+[sub_resource type="Resource" id="Resource_k4pp4"]
+script = ExtResource("1_f524m")
+role = "skirmisher"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 80.0
+base_shield = 18.0
+base_speed = 166.0
+base_damage = 12.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("corrosive_skirmisher_attack")
+palette_color = Color(0.5568628, 0.9607843, 0.54509807, 1)
+id = "corrosive_skirmisher"
+display_name = "Corrosive Skirmisher"
+summary = "Corrosive family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_30t1i"]
+script = ExtResource("2_2u33i")
+category = "advanced"
+prefix = "Phase"
+bonus_health = 0.96
+bonus_damage = 1.08
+bonus_speed = 1.16
+aggression_bonus = 1.12
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_shift = Color(0.56078434, 0.7137255, 1, 1)
+id = "phase_tuned"
+display_name = "Phase Tuned"
+summary = "Phase Tuned modifier package."
+
+[resource]
+script = ExtResource("3_sqeo8")
+family = SubResource("Resource_k4pp4")
+mutation = SubResource("Resource_30t1i")
+role = "skirmisher"
+element_id = "corrosive"
+ailment_id = "rupture"
+base_health = 72.96
+base_shield = 17.316
+base_speed = 192.55999999999997
+base_damage = 12.312
+aggression = 1.3664
+attack_ids = PackedStringArray("corrosive_skirmisher_attack")
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_primary = Color(0.5581569, 0.87925494, 0.6952157, 1)
+palette_secondary = Color(0.6661961, 0.78243136, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "corrosive_resin")
+difficulty_bias = {
+"cataclysm": 1.12,
+"mythic": 1.06
+}
+id = "corrosive_skirmisher__phase_tuned"
+display_name = "Phase Corrosive Skirmisher"
+summary = "Corrosive Skirmisher adapted for Phase Tuned conditions."

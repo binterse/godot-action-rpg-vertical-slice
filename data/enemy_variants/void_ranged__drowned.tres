@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_r0bq1"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_n43l4"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_8quxu"]
+
+[sub_resource type="Resource" id="Resource_lfvxk"]
+script = ExtResource("1_r0bq1")
+role = "ranged"
+element_id = "void"
+ailment_id = "shock"
+base_health = 64.0
+base_shield = 38.0
+base_speed = 132.0
+base_damage = 14.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("void_ranged_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_ranged"
+display_name = "Void Ranged"
+summary = "Void family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_reyig"]
+script = ExtResource("2_n43l4")
+prefix = "Drowned"
+bonus_health = 1.04
+bonus_speed = 0.96
+ailment_bonus = 1.1
+habitat_tags = PackedStringArray("flooded_dome")
+palette_shift = Color(0.38039216, 0.7764706, 1, 1)
+id = "drowned"
+display_name = "Drowned"
+summary = "Drowned modifier package."
+
+[resource]
+script = ExtResource("3_8quxu")
+family = SubResource("Resource_lfvxk")
+mutation = SubResource("Resource_reyig")
+role = "ranged"
+element_id = "void"
+ailment_id = "shock"
+base_health = 66.56
+base_shield = 37.164
+base_speed = 126.72
+base_damage = 14.0
+aggression = 1.08
+attack_ids = PackedStringArray("void_ranged_attack")
+habitat_tags = PackedStringArray("flooded_dome")
+palette_primary = Color(0.59584314, 0.6267059, 1, 1)
+palette_secondary = Color(0.52909803, 0.83011764, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "void_shard")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "void_ranged__drowned"
+display_name = "Drowned Void Ranged"
+summary = "Void Ranged adapted for Drowned conditions."

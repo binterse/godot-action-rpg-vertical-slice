@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HabitatResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="1_n5mv7"]
+
+[resource]
+script = ExtResource("1_n5mv7")
+palette_primary = Color(0.15294118, 0.25490198, 0.14901961, 1)
+palette_secondary = Color(0.6117647, 0.93333334, 0.38431373, 1)
+ambient_color = Color(0.03529412, 0.06666667, 0.03137255, 1)
+hazard_element_id = "corrosive"
+hazard_ailment_id = "rupture"
+hazard_damage = 8.5
+hazard_interval = 3.3
+spawn_bias_role = "bruiser"
+enemy_weight_bias = {
+"bruiser": 0.8,
+"corrosive": 1.1
+}
+id = "toxic_marsh"
+display_name = "Toxic Marsh"
+summary = "Viscous pools and chemical haze punish lingering movement."

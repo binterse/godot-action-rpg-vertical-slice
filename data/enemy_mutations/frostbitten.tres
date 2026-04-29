@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyMutationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="1_udp48"]
+
+[resource]
+script = ExtResource("1_udp48")
+prefix = "Frostbitten"
+bonus_health = 1.06
+bonus_damage = 0.98
+bonus_speed = 0.94
+aggression_bonus = 0.96
+ailment_bonus = 1.14
+habitat_tags = PackedStringArray("cryo_tundra")
+palette_shift = Color(0.56078434, 0.9098039, 1, 1)
+id = "frostbitten"
+display_name = "Frostbitten"
+summary = "Frostbitten modifier package."

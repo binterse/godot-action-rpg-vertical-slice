@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="HabitatResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/habitat_resource.gd" id="1_x8uxp"]
+
+[resource]
+script = ExtResource("1_x8uxp")
+palette_primary = Color(0.22745098, 0.22352941, 0.13333334, 1)
+palette_secondary = Color(0.8352941, 0.83137256, 0.44705883, 1)
+ambient_color = Color(0.06666667, 0.05882353, 0.023529412, 1)
+hazard_element_id = "volt"
+hazard_ailment_id = "shock"
+hazard_damage = 8.8
+hazard_interval = 2.8
+spawn_bias_role = "bruiser"
+enemy_weight_bias = {
+"bruiser": 0.9,
+"volt": 0.8
+}
+id = "irradiated_wasteland"
+display_name = "Irradiated Wasteland"
+summary = "Storm-battered badlands with unstable anomalies and fractured cover."

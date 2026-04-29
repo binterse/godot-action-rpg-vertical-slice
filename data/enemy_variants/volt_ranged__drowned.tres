@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_aat46"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_j33dt"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_61atp"]
+
+[sub_resource type="Resource" id="Resource_shfjt"]
+script = ExtResource("1_aat46")
+role = "ranged"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 64.0
+base_shield = 28.0
+base_speed = 150.0
+base_damage = 14.0
+aggression = 1.1600000000000001
+default_attack_ids = PackedStringArray("volt_ranged_attack")
+palette_color = Color(1, 0.90588236, 0.45490196, 1)
+id = "volt_ranged"
+display_name = "Volt Ranged"
+summary = "Volt family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_reyig"]
+script = ExtResource("2_j33dt")
+prefix = "Drowned"
+bonus_health = 1.04
+bonus_speed = 0.96
+ailment_bonus = 1.1
+habitat_tags = PackedStringArray("flooded_dome")
+palette_shift = Color(0.38039216, 0.7764706, 1, 1)
+id = "drowned"
+display_name = "Drowned"
+summary = "Drowned modifier package."
+
+[resource]
+script = ExtResource("3_61atp")
+family = SubResource("Resource_shfjt")
+mutation = SubResource("Resource_reyig")
+role = "ranged"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 67.8912
+base_shield = 27.384
+base_speed = 144.0
+base_damage = 14.280000000000001
+aggression = 1.1600000000000001
+attack_ids = PackedStringArray("volt_ranged_attack")
+habitat_tags = PackedStringArray("flooded_dome")
+palette_primary = Color(0.7955294, 0.86317647, 0.63478434, 1)
+palette_secondary = Color(0.52909803, 0.83011764, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "volt_cell")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "volt_ranged__drowned"
+display_name = "Drowned Volt Ranged"
+summary = "Volt Ranged adapted for Drowned conditions."

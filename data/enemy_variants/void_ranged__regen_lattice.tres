@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_ynlga"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_vjh1b"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_hoinl"]
+
+[sub_resource type="Resource" id="Resource_lfvxk"]
+script = ExtResource("1_ynlga")
+role = "ranged"
+element_id = "void"
+ailment_id = "shock"
+base_health = 64.0
+base_shield = 38.0
+base_speed = 132.0
+base_damage = 14.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("void_ranged_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_ranged"
+display_name = "Void Ranged"
+summary = "Void family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_pf6a7"]
+script = ExtResource("2_vjh1b")
+category = "advanced"
+prefix = "Regen"
+suffix = "Lattice"
+bonus_health = 1.12
+bonus_damage = 0.98
+ailment_bonus = 1.14
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_shift = Color(0.54901963, 0.9647059, 0.79607844, 1)
+id = "regen_lattice"
+display_name = "Regen Lattice"
+summary = "Regen Lattice modifier package."
+
+[resource]
+script = ExtResource("3_hoinl")
+family = SubResource("Resource_lfvxk")
+mutation = SubResource("Resource_pf6a7")
+role = "ranged"
+element_id = "void"
+ailment_id = "shock"
+base_health = 73.1136
+base_shield = 37.772
+base_speed = 132.0
+base_damage = 13.994399999999999
+aggression = 1.08
+attack_ids = PackedStringArray("void_ranged_attack")
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_primary = Color(0.6514902, 0.6888236, 0.9327059, 1)
+palette_secondary = Color(0.65725493, 0.9731765, 0.84501964, 1)
+loot_ids = PackedStringArray("scrap_bundle", "void_shard")
+difficulty_bias = {
+"cataclysm": 1.12,
+"mythic": 1.06
+}
+id = "void_ranged__regen_lattice"
+display_name = "Regen Void Ranged Lattice"
+summary = "Void Ranged adapted for Regen Lattice conditions."

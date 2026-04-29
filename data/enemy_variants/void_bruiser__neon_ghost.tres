@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_p6wqc"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_qbe6t"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_y8d3x"]
+
+[sub_resource type="Resource" id="Resource_6ulnp"]
+script = ExtResource("1_p6wqc")
+role = "bruiser"
+element_id = "void"
+ailment_id = "shock"
+base_health = 128.0
+base_shield = 46.0
+base_speed = 102.0
+base_damage = 18.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("void_bruiser_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_bruiser"
+display_name = "Void Bruiser"
+summary = "Void family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_bep3x"]
+script = ExtResource("2_qbe6t")
+prefix = "Neon"
+suffix = "Ghost"
+bonus_health = 0.96
+bonus_damage = 1.1
+bonus_speed = 1.1
+aggression_bonus = 1.14
+habitat_tags = PackedStringArray("megacity_ruins")
+palette_shift = Color(1, 0.84705883, 0.43529412, 1)
+id = "neon_ghost"
+display_name = "Neon Ghost"
+summary = "Neon Ghost modifier package."
+
+[resource]
+script = ExtResource("3_y8d3x")
+family = SubResource("Resource_6ulnp")
+mutation = SubResource("Resource_bep3x")
+role = "bruiser"
+element_id = "void"
+ailment_id = "shock"
+base_health = 120.4224
+base_shield = 44.251999999999995
+base_speed = 112.2
+base_damage = 19.404
+aggression = 1.0943999999999998
+attack_ids = PackedStringArray("void_bruiser_attack")
+habitat_tags = PackedStringArray("megacity_ruins")
+palette_primary = Color(0.8003137, 0.65000004, 0.81364703, 1)
+palette_secondary = Color(1, 0.8837647, 0.57082355, 1)
+loot_ids = PackedStringArray("scrap_bundle", "void_shard")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "void_bruiser__neon_ghost"
+display_name = "Neon Void Bruiser Ghost"
+summary = "Void Bruiser adapted for Neon Ghost conditions."

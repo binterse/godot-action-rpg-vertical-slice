@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_qiequ"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_r5u5m"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_qpge5"]
+
+[sub_resource type="Resource" id="Resource_k3jeg"]
+script = ExtResource("1_qiequ")
+role = "skirmisher"
+element_id = "void"
+ailment_id = "shock"
+base_health = 72.0
+base_shield = 28.0
+base_speed = 166.0
+base_damage = 12.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("void_skirmisher_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_skirmisher"
+display_name = "Void Skirmisher"
+summary = "Void family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_718h5"]
+script = ExtResource("2_r5u5m")
+prefix = "Facetide"
+bonus_health = 0.98
+bonus_damage = 1.08
+bonus_speed = 1.03
+aggression_bonus = 1.02
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("crystal_cavern")
+palette_shift = Color(0.6117647, 0.7764706, 1, 1)
+id = "facetide"
+display_name = "Facetide"
+summary = "Facetide modifier package."
+
+[resource]
+script = ExtResource("3_qpge5")
+family = SubResource("Resource_k3jeg")
+mutation = SubResource("Resource_718h5")
+role = "skirmisher"
+element_id = "void"
+ailment_id = "shock"
+base_health = 71.97120000000001
+base_shield = 27.048
+base_speed = 170.98000000000002
+base_damage = 13.2192
+aggression = 1.2444
+attack_ids = PackedStringArray("void_skirmisher_attack")
+habitat_tags = PackedStringArray("crystal_cavern")
+palette_primary = Color(0.6721961, 0.6267059, 1, 1)
+palette_secondary = Color(0.7049412, 0.83011764, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "void_shard")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "void_skirmisher__facetide"
+display_name = "Facetide Void Skirmisher"
+summary = "Void Skirmisher adapted for Facetide conditions."

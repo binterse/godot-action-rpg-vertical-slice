@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_0ojbr"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_ka14r"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_trxpw"]
+
+[sub_resource type="Resource" id="Resource_k3jeg"]
+script = ExtResource("1_0ojbr")
+role = "skirmisher"
+element_id = "void"
+ailment_id = "shock"
+base_health = 72.0
+base_shield = 28.0
+base_speed = 166.0
+base_damage = 12.0
+aggression = 1.22
+default_attack_ids = PackedStringArray("void_skirmisher_attack")
+palette_color = Color(0.7019608, 0.5529412, 1, 1)
+id = "void_skirmisher"
+display_name = "Void Skirmisher"
+summary = "Void family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_lp4tc"]
+script = ExtResource("2_ka14r")
+prefix = "Relicbound"
+bonus_health = 1.08
+bonus_damage = 1.08
+bonus_speed = 0.98
+aggression_bonus = 1.08
+ailment_bonus = 1.14
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_shift = Color(0.7019608, 0.5529412, 1, 1)
+id = "relicbound"
+display_name = "Relicbound"
+summary = "Relicbound modifier package."
+
+[resource]
+script = ExtResource("3_trxpw")
+family = SubResource("Resource_k3jeg")
+mutation = SubResource("Resource_lp4tc")
+role = "skirmisher"
+element_id = "void"
+ailment_id = "shock"
+base_health = 81.64800000000001
+base_shield = 27.608
+base_speed = 162.68
+base_damage = 13.608000000000002
+aggression = 1.3176
+attack_ids = PackedStringArray("void_skirmisher_attack")
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_primary = Color(0.7019608, 0.5529412, 1, 1)
+palette_secondary = Color(0.7734902, 0.6602353, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "void_shard")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "void_skirmisher__relicbound"
+display_name = "Relicbound Void Skirmisher"
+summary = "Void Skirmisher adapted for Relicbound conditions."

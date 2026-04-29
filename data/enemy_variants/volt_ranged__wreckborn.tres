@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_600l0"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_i710l"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_7up5y"]
+
+[sub_resource type="Resource" id="Resource_shfjt"]
+script = ExtResource("1_600l0")
+role = "ranged"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 64.0
+base_shield = 28.0
+base_speed = 150.0
+base_damage = 14.0
+aggression = 1.1600000000000001
+default_attack_ids = PackedStringArray("volt_ranged_attack")
+palette_color = Color(1, 0.90588236, 0.45490196, 1)
+id = "volt_ranged"
+display_name = "Volt Ranged"
+summary = "Volt family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_5yf2r"]
+script = ExtResource("2_i710l")
+prefix = "Wreckborn"
+bonus_damage = 1.02
+bonus_speed = 0.98
+aggression_bonus = 1.04
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("orbital_wreckage")
+palette_shift = Color(0.54509807, 0.827451, 1, 1)
+id = "wreckborn"
+display_name = "Wreckborn"
+summary = "Wreckborn modifier package."
+
+[resource]
+script = ExtResource("3_7up5y")
+family = SubResource("Resource_shfjt")
+mutation = SubResource("Resource_5yf2r")
+role = "ranged"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 64.64
+base_shield = 27.16
+base_speed = 147.0
+base_damage = 14.4228
+aggression = 1.2064000000000001
+attack_ids = PackedStringArray("volt_ranged_attack")
+habitat_tags = PackedStringArray("orbital_wreckage")
+palette_primary = Color(0.84988236, 0.88, 0.63478434, 1)
+palette_secondary = Color(0.6542745, 0.86886275, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "volt_cell")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "volt_ranged__wreckborn"
+display_name = "Wreckborn Volt Ranged"
+summary = "Volt Ranged adapted for Wreckborn conditions."

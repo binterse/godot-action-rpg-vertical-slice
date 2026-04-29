@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyMutationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="1_g0c3j"]
+
+[resource]
+script = ExtResource("1_g0c3j")
+category = "advanced"
+prefix = "Phase"
+bonus_health = 0.96
+bonus_damage = 1.08
+bonus_speed = 1.16
+aggression_bonus = 1.12
+ailment_bonus = 1.08
+habitat_tags = PackedStringArray("orbital_wreckage", "dune_sea", "cryo_tundra", "fungal_jungle", "magma_foundry", "toxic_marsh", "crystal_cavern", "flooded_dome", "megacity_ruins", "biotech_lab", "irradiated_wasteland", "alien_relic_vault")
+palette_shift = Color(0.56078434, 0.7137255, 1, 1)
+id = "phase_tuned"
+display_name = "Phase Tuned"
+summary = "Phase Tuned modifier package."

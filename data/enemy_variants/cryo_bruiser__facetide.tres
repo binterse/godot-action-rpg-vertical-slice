@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_tnpwu"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_l53wl"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_ij83y"]
+
+[sub_resource type="Resource" id="Resource_1oa35"]
+script = ExtResource("1_tnpwu")
+role = "bruiser"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 118.0
+base_shield = 42.0
+base_speed = 94.0
+base_damage = 18.0
+aggression = 0.96
+default_attack_ids = PackedStringArray("cryo_bruiser_attack")
+palette_color = Color(0.53333336, 0.88235295, 1, 1)
+id = "cryo_bruiser"
+display_name = "Cryo Bruiser"
+summary = "Cryo family tuned for bruiser behavior."
+
+[sub_resource type="Resource" id="Resource_718h5"]
+script = ExtResource("2_l53wl")
+prefix = "Facetide"
+bonus_health = 0.98
+bonus_damage = 1.08
+bonus_speed = 1.03
+aggression_bonus = 1.02
+ailment_bonus = 1.12
+habitat_tags = PackedStringArray("crystal_cavern")
+palette_shift = Color(0.6117647, 0.7764706, 1, 1)
+id = "facetide"
+display_name = "Facetide"
+summary = "Facetide modifier package."
+
+[resource]
+script = ExtResource("3_ij83y")
+family = SubResource("Resource_1oa35")
+mutation = SubResource("Resource_718h5")
+role = "bruiser"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 109.85799999999999
+base_shield = 40.571999999999996
+base_speed = 96.82000000000001
+base_damage = 18.468
+aggression = 0.9792
+attack_ids = PackedStringArray("cryo_bruiser_attack")
+habitat_tags = PackedStringArray("crystal_cavern")
+palette_primary = Color(0.5592157, 0.84741175, 1, 1)
+palette_secondary = Color(0.7049412, 0.83011764, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "cryo_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "cryo_bruiser__facetide"
+display_name = "Facetide Cryo Bruiser"
+summary = "Cryo Bruiser adapted for Facetide conditions."

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EnemyMutationResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="1_dwrc0"]
+
+[resource]
+script = ExtResource("1_dwrc0")
+prefix = "Sandscoured"
+bonus_health = 0.98
+bonus_damage = 1.06
+bonus_speed = 1.08
+aggression_bonus = 1.08
+habitat_tags = PackedStringArray("dune_sea")
+palette_shift = Color(0.9647059, 0.7058824, 0.37254903, 1)
+id = "sandscoured"
+display_name = "Sandscoured"
+summary = "Sandscoured modifier package."

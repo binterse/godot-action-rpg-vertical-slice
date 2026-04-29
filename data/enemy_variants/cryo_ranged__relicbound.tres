@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_xew45"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_bi5r7"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_r6jek"]
+
+[sub_resource type="Resource" id="Resource_u0bnm"]
+script = ExtResource("1_xew45")
+role = "ranged"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 64.0
+base_shield = 34.0
+base_speed = 132.0
+base_damage = 14.0
+aggression = 1.08
+default_attack_ids = PackedStringArray("cryo_ranged_attack")
+palette_color = Color(0.53333336, 0.88235295, 1, 1)
+id = "cryo_ranged"
+display_name = "Cryo Ranged"
+summary = "Cryo family tuned for ranged behavior."
+
+[sub_resource type="Resource" id="Resource_lp4tc"]
+script = ExtResource("2_bi5r7")
+prefix = "Relicbound"
+bonus_health = 1.08
+bonus_damage = 1.08
+bonus_speed = 0.98
+aggression_bonus = 1.08
+ailment_bonus = 1.14
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_shift = Color(0.7019608, 0.5529412, 1, 1)
+id = "relicbound"
+display_name = "Relicbound"
+summary = "Relicbound modifier package."
+
+[resource]
+script = ExtResource("3_r6jek")
+family = SubResource("Resource_u0bnm")
+mutation = SubResource("Resource_lp4tc")
+role = "ranged"
+element_id = "cryo"
+ailment_id = "freeze"
+base_health = 67.0464
+base_shield = 33.524
+base_speed = 129.35999999999999
+base_damage = 14.666400000000001
+aggression = 1.1664
+attack_ids = PackedStringArray("cryo_ranged_attack")
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_primary = Color(0.58898044, 0.77364707, 1, 1)
+palette_secondary = Color(0.7734902, 0.6602353, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "cryo_core")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "cryo_ranged__relicbound"
+display_name = "Relicbound Cryo Ranged"
+summary = "Cryo Ranged adapted for Relicbound conditions."

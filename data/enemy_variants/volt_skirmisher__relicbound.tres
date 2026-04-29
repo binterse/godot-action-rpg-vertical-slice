@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EnemyVariantResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/enemy_family_resource.gd" id="1_nntxu"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_mutation_resource.gd" id="2_0jb48"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_variant_resource.gd" id="3_wh4ns"]
+
+[sub_resource type="Resource" id="Resource_fbq4n"]
+script = ExtResource("1_nntxu")
+role = "skirmisher"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 72.0
+base_shield = 18.0
+base_speed = 184.0
+base_damage = 12.0
+aggression = 1.3
+default_attack_ids = PackedStringArray("volt_skirmisher_attack")
+palette_color = Color(1, 0.90588236, 0.45490196, 1)
+id = "volt_skirmisher"
+display_name = "Volt Skirmisher"
+summary = "Volt family tuned for skirmisher behavior."
+
+[sub_resource type="Resource" id="Resource_lp4tc"]
+script = ExtResource("2_0jb48")
+prefix = "Relicbound"
+bonus_health = 1.08
+bonus_damage = 1.08
+bonus_speed = 0.98
+aggression_bonus = 1.08
+ailment_bonus = 1.14
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_shift = Color(0.7019608, 0.5529412, 1, 1)
+id = "relicbound"
+display_name = "Relicbound"
+summary = "Relicbound modifier package."
+
+[resource]
+script = ExtResource("3_wh4ns")
+family = SubResource("Resource_fbq4n")
+mutation = SubResource("Resource_lp4tc")
+role = "skirmisher"
+element_id = "volt"
+ailment_id = "shock"
+base_health = 79.3152
+base_shield = 17.748
+base_speed = 180.32
+base_damage = 13.2192
+aggression = 1.4040000000000001
+attack_ids = PackedStringArray("volt_skirmisher_attack")
+habitat_tags = PackedStringArray("alien_relic_vault")
+palette_primary = Color(0.9016471, 0.7894118, 0.63478434, 1)
+palette_secondary = Color(0.7734902, 0.6602353, 1, 1)
+loot_ids = PackedStringArray("scrap_bundle", "volt_cell")
+difficulty_bias = {
+"cataclysm": 1.04,
+"mythic": 1.0
+}
+id = "volt_skirmisher__relicbound"
+display_name = "Relicbound Volt Skirmisher"
+summary = "Volt Skirmisher adapted for Relicbound conditions."

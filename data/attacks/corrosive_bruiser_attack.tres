@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AttackResource" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/attack_resource.gd" id="1_yo41x"]
+
+[resource]
+script = ExtResource("1_yo41x")
+element_id = "corrosive"
+base_damage = 22.0
+attack_range = 96.0
+cooldown = 1.45
+ailment_buildup = 24.0
+radius = 16.0
+id = "corrosive_bruiser_attack"
+display_name = "Corrosive Bruiser"
+summary = "Corrosive package for bruiser enemies."
