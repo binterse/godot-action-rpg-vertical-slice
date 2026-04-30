@@ -6,6 +6,10 @@ Stridsystem is a Godot 4 sci-fi action RPG combat prototype built as a vertical 
 
 This project was created as part of a hands-on workshop for learning how to build with AI, developed together by me and Per. The goal was to explore how AI can support game design, content generation, scripting, validation, and rapid prototyping inside a real Godot project.
 
+## Open Source
+
+This project is open source under the Apache License 2.0. You can use, study, modify, and share it under the terms described in the [LICENSE](LICENSE) file.
+
 ## Run
 
 - Double-click `run_game.bat`
