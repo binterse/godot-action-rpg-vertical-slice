@@ -2,9 +2,12 @@
 
 Stridsystem is a Godot 4 sci-fi action RPG combat prototype built as a vertical slice.
 
+<img width="1599" height="928" alt="image" src="https://github.com/user-attachments/assets/f1273e1a-6f49-4bac-b53e-45e6c69ed4f0" />
+
+
 ## Workshop Context
 
-This project was created as part of a hands-on workshop for learning how to build with AI, developed together by me and Per. The goal was to explore how AI can support game design, content generation, scripting, validation, and rapid prototyping inside a real Godot project.
+This project was created as part of a hands-on workshop for learning how to build with AI, developed together by Björn and Per. The goal was to explore how AI can support game design, content generation, scripting, validation, and rapid prototyping inside a real Godot project.
 
 ## Open Source
 
